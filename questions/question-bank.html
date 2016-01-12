@@ -1,0 +1,64 @@
+<div class="question-bank-modal" >
+  <header class="modal-header">
+    <h4 class="modal-title title">Question Bank</h4>
+    <fa name="times" class="close fa-lg" ng-click="close()"></fa>
+  </header>
+  <section class="modal-body has-scroll">
+    <form class="row" data-ng-submit="filterQuestions()">
+        
+
+        <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+        <div class="col-sm-4 col-xs-6 search-filter">
+          <ui-select data-ng-model="subjects.selected" ng-disabled="disabled">
+            <ui-select-match placeholder="{{'lessons.bySubject' | translate}}">{{$select.selected.name |translate}}</ui-select-match>
+            <ui-select-choices repeat="subject.id as subject in subjects | filter: { name: $select.search }" ng-class="{'select-right-text' : $root.direction=='rtl'}">
+              <div data-ng-bind-html="subject.name | highlight: $select.search |translate"></div>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+
+        <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+        <div class="col-sm-4 col-xs-6 search-filter">
+          <ui-select data-ng-model="grades.selected" ng-disabled="disabled">
+            <ui-select-match placeholder="{{'lessons.byGrade' | translate}}">{{$select.selected.name |translate}}</ui-select-match>
+            <ui-select-choices repeat="grade.id as grade in grades | filter: { name: $select.search }" ng-class="{'select-right-text' : $root.direction=='rtl'}">
+              <div data-ng-bind-html="grade.name | highlight: $select.search |translate"></div>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+
+        <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+        <div class="col-sm-4 col-xs-6 search-filter">
+          <ui-select data-ng-model="dates.selected" ng-disabled="disabled">
+            <ui-select-match placeholder="{{'lessons.byDate' | translate}}">{{$select.selected.name |translate}}</ui-select-match>
+            <ui-select-choices repeat="date.id as date in dates | filter: { name: $select.search  } " ng-class="{'select-right-text' : $root.direction=='rtl'}">
+              <div data-ng-bind-html="date.name |  highlight: $select.search |translate"></div>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+
+        <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+        <div class="col-sm-4 col-xs-6 search-filter">
+          <ui-select data-ng-model="types.selected" ng-disabled="disabled">
+            <ui-select-match placeholder="{{'quiz.byQuestionType' | translate}}">{{$select.selected.name |translate}}</ui-select-match>
+            <ui-select-choices repeat="type in types | filter: { name: $select.search }" ng-class="{'select-right-text' : $root.direction=='rtl'}">
+              <div data-ng-bind-html="type.name | highlight: $select.search |translate"></div>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+
+        <div class="col-sm-4 col-md-offset-4 col-xs-6 search-filter">
+          <button type="submit" class="btn btn-aurora searchBtn" translate="lessons.search"></button>
+        </div>
+    </form>
+    <div class="question-bank-result row">
+      <div dw-loading="modal_loading" dw-loading-options="{text: 'Loading...'}">
+        <div id="grid2" ui-grid="gridOptions" ui-grid-selection ui-grid-infinite-scroll class="grid ltr"></div>
+          <div id="more_loading" dw-loading="more_loading" dw-loading-options="{text: 'Loading more questions...'}" style="width: 100%;"></div>
+      </div>
+    </div>
+  </section>
+  <section class="modal-footer cr-align">
+    <button class="btn btn-aurora no-float" translate="common.addQuestion" ng-click="addSelectedQuestions()"></button>
+  </section>
+</div>

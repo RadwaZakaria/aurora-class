@@ -1,0 +1,1328 @@
+{
+  "_type": "Quiz",
+  "id": 316,
+  "name": "test",
+  "description": "test",
+  "summary": null,
+  "time_limit": 7000,
+  "time_per_question": null,
+  "enable_comments": null,
+  "randomise": true,
+  "show_correct_answer": true,
+  "hide_points": true,
+  "start_date": "2016-01-13T06:00:00.000+02:00",
+  "end_date": "2016-02-05T06:00:00.000+02:00",
+  "created_at": "2016-01-12T10:54:14.313+02:00",
+  "updated_at": "2016-01-12T10:54:14.313+02:00",
+  "state": "planned",
+  "scoresheets_count": 0,
+  "grade_id": 3,
+  "subject_id": 3,
+  "is_offline": false,
+  "shares": {
+    "groups": 0,
+    "users": 0,
+    "total_users": 0
+  },
+  "questions": [
+    {
+      "_type": "Content",
+      "id": 3984,
+      "name": null,
+      "containable_id": 32,
+      "containable_type": "Assignment",
+      "content_type": "Question",
+      "data": {
+        "id": 3984,
+        "typeId": 10,
+        "header": "View attached document.",
+        "content": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>iuliyliloiijoiu;ouoi</p>\n</body>\n</html>",
+        "addToQuestionBank": false,
+        "points": 10,
+        "fromQuestionBank": true,
+        "version": "1.0",
+        "fileName": "11082343_469038766580720_2774306553318141681_o.jpg",
+        "attachmentFileUID": "ee792ba8af8eb3d97cf82d0cd990d1579dfbae5b",
+        "viewModel": {
+          "user": {
+            "_type": "User",
+            "id": 15,
+            "name": "teacher",
+            "email": "teacher@appenza.com",
+            "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+            "is_student": false,
+            "is_teacher": true,
+            "is_parent": false,
+            "license_key": "3tehu9za1xm07klqnb",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "role": {
+              "_type": "Role",
+              "id": 2,
+              "name": "Teacher"
+            },
+            "kids": [
+              {
+                "_type": "User",
+                "id": 399,
+                "name": "Nada Magdi Shaker",
+                "email": "nada.magdi@auroralms.com",
+                "last_sign_in_at": null,
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "zg0y13diqoxa79nlp2",
+                "school": {
+                  "_type": "School",
+                  "id": 3,
+                  "organization_id": 1,
+                  "name": "El Resala School",
+                  "description": null
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 1,
+                  "name": "Class A",
+                  "grade_id": 3
+                }
+              },
+              {
+                "_type": "User",
+                "id": 1,
+                "name": "Omar",
+                "email": "owahab@gmail.com",
+                "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "zwy8i1bdt0hqfxepml",
+                "avatar": {
+                  "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+                  "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+                },
+                "school": {
+                  "_type": "School",
+                  "id": 1,
+                  "organization_id": 1,
+                  "name": "New School",
+                  "description": ""
+                },
+                "grade": {
+                  "_type": "Grade",
+                  "id": 3,
+                  "school_id": 1,
+                  "name": "Grade 3"
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 21,
+                  "name": "Class D",
+                  "grade_id": 4
+                }
+              },
+              {
+                "_type": "User",
+                "id": 432,
+                "name": "radwa zakaria",
+                "email": "radwa.zakaria@appenza-studio.com",
+                "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "qof3-6c5f",
+                "avatar": {
+                  "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+                  "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+                },
+                "school": {
+                  "_type": "School",
+                  "id": 1,
+                  "organization_id": 1,
+                  "name": "New School",
+                  "description": ""
+                },
+                "grade": {
+                  "_type": "Grade",
+                  "id": 3,
+                  "school_id": 1,
+                  "name": "Grade 3"
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 3,
+                  "name": "Class C",
+                  "grade_id": 3
+                },
+                "kids": [
+                  {
+                    "_type": "User",
+                    "id": 384,
+                    "name": "Ziad Ayman Jameel",
+                    "email": "ziad.ayman@auroralms.com",
+                    "last_sign_in_at": null,
+                    "is_student": true,
+                    "is_teacher": false,
+                    "is_parent": false,
+                    "license_key": "kmg2jqaz1o9r75eycn",
+                    "school": {
+                      "_type": "School",
+                      "id": 3,
+                      "organization_id": 1,
+                      "name": "El Resala School",
+                      "description": null
+                    },
+                    "role": {
+                      "_type": "Role",
+                      "id": 1,
+                      "name": "Student"
+                    },
+                    "class": {
+                      "_type": "Stream",
+                      "id": 1,
+                      "name": "Class A",
+                      "grade_id": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "type": {
+            "id": 10,
+            "name": "Attachment",
+            "template": "components/questions/templates/attachment.html",
+            "answerTemplate": "components/questions/templates/attachment-view.html",
+            "controller": "attachmentController"
+          },
+          "errors": [],
+          "isValid": true
+        }
+      },
+      "created_at": "2015-10-27T12:55:13.500+02:00",
+      "updated_at": "2016-01-12T14:11:13.247+02:00",
+      "user": {
+        "_type": "User",
+        "id": 15,
+        "name": "teacher",
+        "email": "teacher@appenza.com",
+        "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+        "is_student": false,
+        "is_teacher": true,
+        "is_parent": false,
+        "license_key": "3tehu9za1xm07klqnb",
+        "avatar": {
+          "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+          "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+        },
+        "school": {
+          "_type": "School",
+          "id": 1,
+          "organization_id": 1,
+          "name": "New School",
+          "description": ""
+        },
+        "role": {
+          "_type": "Role",
+          "id": 2,
+          "name": "Teacher"
+        },
+        "kids": [
+          {
+            "_type": "User",
+            "id": 399,
+            "name": "Nada Magdi Shaker",
+            "email": "nada.magdi@auroralms.com",
+            "last_sign_in_at": null,
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "zg0y13diqoxa79nlp2",
+            "school": {
+              "_type": "School",
+              "id": 3,
+              "organization_id": 1,
+              "name": "El Resala School",
+              "description": null
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 1,
+              "name": "Class A",
+              "grade_id": 3
+            }
+          },
+          {
+            "_type": "User",
+            "id": 1,
+            "name": "Omar",
+            "email": "owahab@gmail.com",
+            "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "zwy8i1bdt0hqfxepml",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "grade": {
+              "_type": "Grade",
+              "id": 3,
+              "school_id": 1,
+              "name": "Grade 3"
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 21,
+              "name": "Class D",
+              "grade_id": 4
+            }
+          },
+          {
+            "_type": "User",
+            "id": 432,
+            "name": "radwa zakaria",
+            "email": "radwa.zakaria@appenza-studio.com",
+            "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "qof3-6c5f",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "grade": {
+              "_type": "Grade",
+              "id": 3,
+              "school_id": 1,
+              "name": "Grade 3"
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 3,
+              "name": "Class C",
+              "grade_id": 3
+            },
+            "kids": [
+              {
+                "_type": "User",
+                "id": 384,
+                "name": "Ziad Ayman Jameel",
+                "email": "ziad.ayman@auroralms.com",
+                "last_sign_in_at": null,
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "kmg2jqaz1o9r75eycn",
+                "school": {
+                  "_type": "School",
+                  "id": 3,
+                  "organization_id": 1,
+                  "name": "El Resala School",
+                  "description": null
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 1,
+                  "name": "Class A",
+                  "grade_id": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_type": "Content",
+      "id": 3784,
+      "name": null,
+      "containable_id": 164,
+      "containable_type": "Quiz",
+      "content_type": "Question",
+      "data": {
+        "id": 3784,
+        "typeId": 1,
+        "header": "Select the Right Answer : ",
+        "content": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>&nbsp;dewdew<br></p>\n</body>\n</html>",
+        "addToQuestionBank": false,
+        "points": 10,
+        "fromQuestionBank": true,
+        "version": "1.0",
+        "idealAnswers": [
+          {
+            "id": 1,
+            "value": "wedew"
+          }
+        ],
+        "options": [
+          {
+            "id": 0,
+            "value": "eddw"
+          },
+          {
+            "id": 1,
+            "value": "wedew"
+          }
+        ],
+        "viewModel": {
+          "user": {
+            "_type": "User",
+            "id": 15,
+            "name": "teacher",
+            "email": "teacher@appenza.com",
+            "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+            "is_student": false,
+            "is_teacher": true,
+            "is_parent": false,
+            "license_key": "3tehu9za1xm07klqnb",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "role": {
+              "_type": "Role",
+              "id": 2,
+              "name": "Teacher"
+            },
+            "kids": [
+              {
+                "_type": "User",
+                "id": 399,
+                "name": "Nada Magdi Shaker",
+                "email": "nada.magdi@auroralms.com",
+                "last_sign_in_at": null,
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "zg0y13diqoxa79nlp2",
+                "school": {
+                  "_type": "School",
+                  "id": 3,
+                  "organization_id": 1,
+                  "name": "El Resala School",
+                  "description": null
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 1,
+                  "name": "Class A",
+                  "grade_id": 3
+                }
+              },
+              {
+                "_type": "User",
+                "id": 1,
+                "name": "Omar",
+                "email": "owahab@gmail.com",
+                "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "zwy8i1bdt0hqfxepml",
+                "avatar": {
+                  "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+                  "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+                },
+                "school": {
+                  "_type": "School",
+                  "id": 1,
+                  "organization_id": 1,
+                  "name": "New School",
+                  "description": ""
+                },
+                "grade": {
+                  "_type": "Grade",
+                  "id": 3,
+                  "school_id": 1,
+                  "name": "Grade 3"
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 21,
+                  "name": "Class D",
+                  "grade_id": 4
+                }
+              },
+              {
+                "_type": "User",
+                "id": 432,
+                "name": "radwa zakaria",
+                "email": "radwa.zakaria@appenza-studio.com",
+                "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "qof3-6c5f",
+                "avatar": {
+                  "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+                  "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+                },
+                "school": {
+                  "_type": "School",
+                  "id": 1,
+                  "organization_id": 1,
+                  "name": "New School",
+                  "description": ""
+                },
+                "grade": {
+                  "_type": "Grade",
+                  "id": 3,
+                  "school_id": 1,
+                  "name": "Grade 3"
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 3,
+                  "name": "Class C",
+                  "grade_id": 3
+                },
+                "kids": [
+                  {
+                    "_type": "User",
+                    "id": 384,
+                    "name": "Ziad Ayman Jameel",
+                    "email": "ziad.ayman@auroralms.com",
+                    "last_sign_in_at": null,
+                    "is_student": true,
+                    "is_teacher": false,
+                    "is_parent": false,
+                    "license_key": "kmg2jqaz1o9r75eycn",
+                    "school": {
+                      "_type": "School",
+                      "id": 3,
+                      "organization_id": 1,
+                      "name": "El Resala School",
+                      "description": null
+                    },
+                    "role": {
+                      "_type": "Role",
+                      "id": 1,
+                      "name": "Student"
+                    },
+                    "class": {
+                      "_type": "Stream",
+                      "id": 1,
+                      "name": "Class A",
+                      "grade_id": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "type": {
+            "id": 1,
+            "name": "MCQ",
+            "template": "components/questions/templates/mcq.html",
+            "answerTemplate": "components/questions/templates/mcq-view.html",
+            "controller": "mcqController"
+          },
+          "errors": [],
+          "isValid": true
+        }
+      },
+      "created_at": "2015-08-30T11:50:49.190+02:00",
+      "updated_at": "2016-01-12T14:11:13.272+02:00",
+      "user": {
+        "_type": "User",
+        "id": 15,
+        "name": "teacher",
+        "email": "teacher@appenza.com",
+        "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+        "is_student": false,
+        "is_teacher": true,
+        "is_parent": false,
+        "license_key": "3tehu9za1xm07klqnb",
+        "avatar": {
+          "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+          "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+        },
+        "school": {
+          "_type": "School",
+          "id": 1,
+          "organization_id": 1,
+          "name": "New School",
+          "description": ""
+        },
+        "role": {
+          "_type": "Role",
+          "id": 2,
+          "name": "Teacher"
+        },
+        "kids": [
+          {
+            "_type": "User",
+            "id": 399,
+            "name": "Nada Magdi Shaker",
+            "email": "nada.magdi@auroralms.com",
+            "last_sign_in_at": null,
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "zg0y13diqoxa79nlp2",
+            "school": {
+              "_type": "School",
+              "id": 3,
+              "organization_id": 1,
+              "name": "El Resala School",
+              "description": null
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 1,
+              "name": "Class A",
+              "grade_id": 3
+            }
+          },
+          {
+            "_type": "User",
+            "id": 1,
+            "name": "Omar",
+            "email": "owahab@gmail.com",
+            "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "zwy8i1bdt0hqfxepml",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "grade": {
+              "_type": "Grade",
+              "id": 3,
+              "school_id": 1,
+              "name": "Grade 3"
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 21,
+              "name": "Class D",
+              "grade_id": 4
+            }
+          },
+          {
+            "_type": "User",
+            "id": 432,
+            "name": "radwa zakaria",
+            "email": "radwa.zakaria@appenza-studio.com",
+            "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "qof3-6c5f",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "grade": {
+              "_type": "Grade",
+              "id": 3,
+              "school_id": 1,
+              "name": "Grade 3"
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 3,
+              "name": "Class C",
+              "grade_id": 3
+            },
+            "kids": [
+              {
+                "_type": "User",
+                "id": 384,
+                "name": "Ziad Ayman Jameel",
+                "email": "ziad.ayman@auroralms.com",
+                "last_sign_in_at": null,
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "kmg2jqaz1o9r75eycn",
+                "school": {
+                  "_type": "School",
+                  "id": 3,
+                  "organization_id": 1,
+                  "name": "El Resala School",
+                  "description": null
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 1,
+                  "name": "Class A",
+                  "grade_id": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_type": "Content",
+      "id": 4143,
+      "name": null,
+      "containable_id": 281,
+      "containable_type": "Quiz",
+      "content_type": "Question",
+      "data": {
+        "id": 4143,
+        "typeId": 4,
+        "header": "Highlight in the next paragraph",
+        "content": "<p><span style=\"text-decoration: none;\" id=\"SPAN0\">hello</span> hello hello&nbsp;</p>",
+        "addToQuestionBank": false,
+        "points": 10,
+        "fromQuestionBank": true,
+        "version": "1.0",
+        "idealAnswers": [
+          {
+            "id": "txt0",
+            "value": "hello",
+            "HTMLid": "SPAN0"
+          }
+        ],
+        "viewModel": {
+          "user": {
+            "_type": "User",
+            "id": 15,
+            "name": "teacher",
+            "email": "teacher@appenza.com",
+            "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+            "is_student": false,
+            "is_teacher": true,
+            "is_parent": false,
+            "license_key": "3tehu9za1xm07klqnb",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "role": {
+              "_type": "Role",
+              "id": 2,
+              "name": "Teacher"
+            },
+            "kids": [
+              {
+                "_type": "User",
+                "id": 399,
+                "name": "Nada Magdi Shaker",
+                "email": "nada.magdi@auroralms.com",
+                "last_sign_in_at": null,
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "zg0y13diqoxa79nlp2",
+                "school": {
+                  "_type": "School",
+                  "id": 3,
+                  "organization_id": 1,
+                  "name": "El Resala School",
+                  "description": null
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 1,
+                  "name": "Class A",
+                  "grade_id": 3
+                }
+              },
+              {
+                "_type": "User",
+                "id": 1,
+                "name": "Omar",
+                "email": "owahab@gmail.com",
+                "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "zwy8i1bdt0hqfxepml",
+                "avatar": {
+                  "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+                  "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+                },
+                "school": {
+                  "_type": "School",
+                  "id": 1,
+                  "organization_id": 1,
+                  "name": "New School",
+                  "description": ""
+                },
+                "grade": {
+                  "_type": "Grade",
+                  "id": 3,
+                  "school_id": 1,
+                  "name": "Grade 3"
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 21,
+                  "name": "Class D",
+                  "grade_id": 4
+                }
+              },
+              {
+                "_type": "User",
+                "id": 432,
+                "name": "radwa zakaria",
+                "email": "radwa.zakaria@appenza-studio.com",
+                "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "qof3-6c5f",
+                "avatar": {
+                  "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+                  "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+                },
+                "school": {
+                  "_type": "School",
+                  "id": 1,
+                  "organization_id": 1,
+                  "name": "New School",
+                  "description": ""
+                },
+                "grade": {
+                  "_type": "Grade",
+                  "id": 3,
+                  "school_id": 1,
+                  "name": "Grade 3"
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 3,
+                  "name": "Class C",
+                  "grade_id": 3
+                },
+                "kids": [
+                  {
+                    "_type": "User",
+                    "id": 384,
+                    "name": "Ziad Ayman Jameel",
+                    "email": "ziad.ayman@auroralms.com",
+                    "last_sign_in_at": null,
+                    "is_student": true,
+                    "is_teacher": false,
+                    "is_parent": false,
+                    "license_key": "kmg2jqaz1o9r75eycn",
+                    "school": {
+                      "_type": "School",
+                      "id": 3,
+                      "organization_id": 1,
+                      "name": "El Resala School",
+                      "description": null
+                    },
+                    "role": {
+                      "_type": "Role",
+                      "id": 1,
+                      "name": "Student"
+                    },
+                    "class": {
+                      "_type": "Stream",
+                      "id": 1,
+                      "name": "Class A",
+                      "grade_id": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "type": {
+            "id": 4,
+            "name": "Highlight",
+            "template": "components/questions/templates/passage.html",
+            "answerTemplate": "components/questions/templates/passage-view.html",
+            "controller": "passageController"
+          },
+          "errors": [],
+          "isValid": true
+        }
+      },
+      "created_at": "2015-12-22T11:23:34.506+02:00",
+      "updated_at": "2016-01-12T14:11:13.319+02:00",
+      "user": {
+        "_type": "User",
+        "id": 15,
+        "name": "teacher",
+        "email": "teacher@appenza.com",
+        "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+        "is_student": false,
+        "is_teacher": true,
+        "is_parent": false,
+        "license_key": "3tehu9za1xm07klqnb",
+        "avatar": {
+          "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+          "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+        },
+        "school": {
+          "_type": "School",
+          "id": 1,
+          "organization_id": 1,
+          "name": "New School",
+          "description": ""
+        },
+        "role": {
+          "_type": "Role",
+          "id": 2,
+          "name": "Teacher"
+        },
+        "kids": [
+          {
+            "_type": "User",
+            "id": 399,
+            "name": "Nada Magdi Shaker",
+            "email": "nada.magdi@auroralms.com",
+            "last_sign_in_at": null,
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "zg0y13diqoxa79nlp2",
+            "school": {
+              "_type": "School",
+              "id": 3,
+              "organization_id": 1,
+              "name": "El Resala School",
+              "description": null
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 1,
+              "name": "Class A",
+              "grade_id": 3
+            }
+          },
+          {
+            "_type": "User",
+            "id": 1,
+            "name": "Omar",
+            "email": "owahab@gmail.com",
+            "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "zwy8i1bdt0hqfxepml",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "grade": {
+              "_type": "Grade",
+              "id": 3,
+              "school_id": 1,
+              "name": "Grade 3"
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 21,
+              "name": "Class D",
+              "grade_id": 4
+            }
+          },
+          {
+            "_type": "User",
+            "id": 432,
+            "name": "radwa zakaria",
+            "email": "radwa.zakaria@appenza-studio.com",
+            "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "qof3-6c5f",
+            "avatar": {
+              "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+              "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+            },
+            "school": {
+              "_type": "School",
+              "id": 1,
+              "organization_id": 1,
+              "name": "New School",
+              "description": ""
+            },
+            "grade": {
+              "_type": "Grade",
+              "id": 3,
+              "school_id": 1,
+              "name": "Grade 3"
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 3,
+              "name": "Class C",
+              "grade_id": 3
+            },
+            "kids": [
+              {
+                "_type": "User",
+                "id": 384,
+                "name": "Ziad Ayman Jameel",
+                "email": "ziad.ayman@auroralms.com",
+                "last_sign_in_at": null,
+                "is_student": true,
+                "is_teacher": false,
+                "is_parent": false,
+                "license_key": "kmg2jqaz1o9r75eycn",
+                "school": {
+                  "_type": "School",
+                  "id": 3,
+                  "organization_id": 1,
+                  "name": "El Resala School",
+                  "description": null
+                },
+                "role": {
+                  "_type": "Role",
+                  "id": 1,
+                  "name": "Student"
+                },
+                "class": {
+                  "_type": "Stream",
+                  "id": 1,
+                  "name": "Class A",
+                  "grade_id": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "grade": {
+    "_type": "Grade",
+    "id": 3,
+    "school_id": 1,
+    "name": "Grade 3"
+  },
+  "groups": [],
+  "user": {
+    "_type": "User",
+    "id": 15,
+    "name": "teacher",
+    "email": "teacher@appenza.com",
+    "last_sign_in_at": "2016-01-12T14:02:29.416+02:00",
+    "is_student": false,
+    "is_teacher": true,
+    "is_parent": false,
+    "license_key": "3tehu9za1xm07klqnb",
+    "avatar": {
+      "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/small/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=QHlxZ4%2BPVX%2BmoRxyf%2FzgojOgc6w%3D",
+      "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/015/original/avatar1449570185.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=5xc%2BqWEOBBplhbV8s294ZHJHIq0%3D"
+    },
+    "school": {
+      "_type": "School",
+      "id": 1,
+      "organization_id": 1,
+      "name": "New School",
+      "description": ""
+    },
+    "role": {
+      "_type": "Role",
+      "id": 2,
+      "name": "Teacher"
+    },
+    "kids": [
+      {
+        "_type": "User",
+        "id": 399,
+        "name": "Nada Magdi Shaker",
+        "email": "nada.magdi@auroralms.com",
+        "last_sign_in_at": null,
+        "is_student": true,
+        "is_teacher": false,
+        "is_parent": false,
+        "license_key": "zg0y13diqoxa79nlp2",
+        "school": {
+          "_type": "School",
+          "id": 3,
+          "organization_id": 1,
+          "name": "El Resala School",
+          "description": null
+        },
+        "role": {
+          "_type": "Role",
+          "id": 1,
+          "name": "Student"
+        },
+        "class": {
+          "_type": "Stream",
+          "id": 1,
+          "name": "Class A",
+          "grade_id": 3
+        }
+      },
+      {
+        "_type": "User",
+        "id": 1,
+        "name": "Omar",
+        "email": "owahab@gmail.com",
+        "last_sign_in_at": "2016-01-12T12:30:54.398+02:00",
+        "is_student": true,
+        "is_teacher": false,
+        "is_parent": false,
+        "license_key": "zwy8i1bdt0hqfxepml",
+        "avatar": {
+          "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/small/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=O2kB8DPX7YiJQlMIzX12y2D6zJk%3D",
+          "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/001/original/avatar1441878432.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=z03%2BOFDDDjHKCRcPhqUo4qDJQ0M%3D"
+        },
+        "school": {
+          "_type": "School",
+          "id": 1,
+          "organization_id": 1,
+          "name": "New School",
+          "description": ""
+        },
+        "grade": {
+          "_type": "Grade",
+          "id": 3,
+          "school_id": 1,
+          "name": "Grade 3"
+        },
+        "role": {
+          "_type": "Role",
+          "id": 1,
+          "name": "Student"
+        },
+        "class": {
+          "_type": "Stream",
+          "id": 21,
+          "name": "Class D",
+          "grade_id": 4
+        }
+      },
+      {
+        "_type": "User",
+        "id": 432,
+        "name": "radwa zakaria",
+        "email": "radwa.zakaria@appenza-studio.com",
+        "last_sign_in_at": "2015-11-24T12:53:39.213+02:00",
+        "is_student": true,
+        "is_teacher": false,
+        "is_parent": false,
+        "license_key": "qof3-6c5f",
+        "avatar": {
+          "small": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/small/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=3UTlRHXCzD4UJSc6fSQOA04OTD0%3D",
+          "original": "https://aurora-files.s3.amazonaws.com/users/avatars/000/000/432/original/avatar1450347739.jpeg?AWSAccessKeyId=AKIAIZ7RSCTUJMEVSZCQ&Expires=1452604536&Signature=9RKEDWJfhSl6oLN1PKqiT%2FQRvXE%3D"
+        },
+        "school": {
+          "_type": "School",
+          "id": 1,
+          "organization_id": 1,
+          "name": "New School",
+          "description": ""
+        },
+        "grade": {
+          "_type": "Grade",
+          "id": 3,
+          "school_id": 1,
+          "name": "Grade 3"
+        },
+        "role": {
+          "_type": "Role",
+          "id": 1,
+          "name": "Student"
+        },
+        "class": {
+          "_type": "Stream",
+          "id": 3,
+          "name": "Class C",
+          "grade_id": 3
+        },
+        "kids": [
+          {
+            "_type": "User",
+            "id": 384,
+            "name": "Ziad Ayman Jameel",
+            "email": "ziad.ayman@auroralms.com",
+            "last_sign_in_at": null,
+            "is_student": true,
+            "is_teacher": false,
+            "is_parent": false,
+            "license_key": "kmg2jqaz1o9r75eycn",
+            "school": {
+              "_type": "School",
+              "id": 3,
+              "organization_id": 1,
+              "name": "El Resala School",
+              "description": null
+            },
+            "role": {
+              "_type": "Role",
+              "id": 1,
+              "name": "Student"
+            },
+            "class": {
+              "_type": "Stream",
+              "id": 1,
+              "name": "Class A",
+              "grade_id": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "subject": {
+    "_type": "Subject",
+    "id": 3,
+    "name": "Mathematics"
+  }
+}

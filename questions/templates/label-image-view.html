@@ -1,0 +1,27 @@
+﻿<div class="question-view-container">
+    <fieldset class="from-question-bank" ng-show="question.fromQuestionBank && question.viewModel.user.id != $rootScope.user.id">
+        <div class="pull-right">
+            <img ng-src="{{question.viewModel.user.avatar.small}}">
+            <label class="control-label">{{question.viewModel.user.name}}</label>
+        </div>
+    </fieldset>
+    <div ng-bind-html="question.header | unsafe" class="question-header"></div>
+    <div class="label-image-container" ng-style="question.backgroundImagestyle">
+        <div ng-repeat="list in question.mainLists track by $index">
+            <div ng-init="translateb =' translate(' +list.div.dim.x +'px,'+ list.div.dim.y+'px)'"
+                 ng-style="list.div.dim">
+                <div ng-init="question.userAnswer[$index].id = list.id" ng-style="{'-webkit-transform': translateb}">
+                    <ui-select required data-ng-model="question.userAnswer[$index].value" id="ddl">
+                        <ui-select-match>
+                            {{$select.selected.text}}
+                        </ui-select-match>
+                        <ui-select-choices
+                                repeat="item.text as item in list.items  | filter: { text: $select.search }">
+                            <div data-ng-bind-html="item.text | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

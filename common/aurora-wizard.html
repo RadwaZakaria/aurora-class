@@ -1,0 +1,5 @@
+<div class="wizard" ng-if="wizard.steps.length">
+  <ol>
+    <li ng-repeat="step in wizard.steps track by $index" translate="{{step}}" ng-class="{'complete': wizard.currentStep > $index }" style="width: {{100 / wizard.steps.length}}%"></li>
+  </ol>
+</div>

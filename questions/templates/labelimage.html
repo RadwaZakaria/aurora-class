@@ -1,0 +1,122 @@
+﻿<div ng-controller="labelimageController" dw-loading="saving" dw-loading-options="{text:'Saving...'}">
+    <div class="container">
+        <form name="labelImageForm" ng-submit="processForm( )" novalidate>
+            <header>
+                <h1 class="title" translate="quiz.labelimagetitle"></h1>
+            </header>
+
+            <section class="clearfix fw">
+                <div class="col-md-9 col-xs-8">
+                <div class="form-group form-group-lg row">
+                    <label class="control-label-lg col-sm-2" for="name" translate="quiz.questionstitle"></label>
+                    <div class="col-sm-7">
+                        <input type="text" name="name" class="form-control" ng-disabled="question.fromQuestionBank" ng-model="question.header" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <fieldset ng-hide="question.fromQuestionBank">
+                        <aurora-texteditor type="question.content" class="fw"></aurora-texteditor>
+                    </fieldset>
+                    <fieldset ng-disabled="question.fromQuestionBank" class="question-from-bank" ng-if="question.fromQuestionBank">
+                        <div ng-bind-html="question.content | unsafe"/>
+                    </fieldset>
+                </div>
+                    </div>
+            </section>
+            <section>
+                <div class="col-xs-12 text-right">
+                    <button  type="button" ng-click="saveContent()" class="btn btn-primary btn-aurora" translate="quiz.save"></button>
+                </div>
+                <div class="container mainLessonPopup ">
+                    <div class="col-md-12 col-sm-9 col-xs-9 editorDiv">
+                        <!--ng-style="backgroundImagestyle"-->
+                        <div id="dropZone" style="width:800px; height:600px ;"  >
+                            <div style="width:800px;height:600px ;position: absolute;" id="imageZone">
+                                <media-player uid="{{question.image.uid}}" type="Image" url="{{question.image.targetURL}}" class="videogular-container" ng-if="question.image!=undefined"></media-player>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a data-ng-click="changeBackground()"><div translate="quiz.changebackground" ></div></a>
+            </section>
+            <div class="col-md-12 col-sm-3 col-xs-3 ">
+                <ul>
+                    <li ng-repeat="list in mainLists">
+                        <div class="col-md-12">
+                            <div class=" col-md-2">
+                                <div translate="quiz.setDropdownValues" translate-values="{dropdownValues: '{{list.id}}'}">
+                                </div>
+                            </div>
+                            <div class=" col-md-1">
+                                <a data-ng-click="additem(this)" class=""><div><img src="../../../assets/images/insertion_control.jpg"></div> </a>
+                            </div>
+                            <div class=" col-md-1">
+                                <a data-ng-click="removeList(this)" class=""><div><img src="../../../assets/images/deletion_control.jpg"></div> </a>
+                            </div>
+                        </div>
+                        <ul>
+                            <li ng-repeat="item in list.items ">
+                                <div class="col-md-12">
+                                    <div class=" col-md-5">
+
+                                        <input type="text" name="timelimit" class="form-control" placeholder="" ng-model="item.text" id="{{item.id}}"></input>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <a data-ng-click="deleteitem(this)" class=""><div><img src="../../../assets/images/delete.png" /></div> </a>
+
+                                    </div>
+                                    <div class="col-md-1">
+                                        <input class="checkbox" type="checkbox" data-ng-model="item.isCorrectAnswer" data-ng-click="onchecked(this)" />
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label  translate="quiz.setAsCorrectAnswer">
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 text-left">
+                <button type="button" class="btn btn-primary btn-aurora" translate="quiz.addDropDwon" data-ng-click="addList()"></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!--<section>
+    <header>
+        <h2 class="title" translate="quiz.setAsCorrectAnswer"></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-4 col-xs-6">
+            <div class="form-group form-group-lg">
+                <ui-select required data-ng-model="answers.selected" id="answers">
+                    <ui-select-match placeholder="{{'quiz.selectanswer' | translate}}">{{$select.selected.text}}</ui-select-match>
+                    <ui-select-choices repeat="answer.value as answer in answers  | filter: { name: $select.search }">
+                        <div data-ng-bind-html="answer.text | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+
+    </div>
+</section>-->
+
+
+
+
+
+
+
+
+
+
+
+

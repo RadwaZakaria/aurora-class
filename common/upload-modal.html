@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h4 class="modal-title" translate="common.uploadPhotoVideo"></h4>
+    <fa name="times fa-lg" class="close" ng-click="close()"></fa>
+    <!--<h4 class="modal-title" ng-model="columnName">Images</h4>-->
+</div>
+<section class="modal-body">
+	<form ng-submit="close()" class="no-margin" name="newImageForm">
+	    <aurora-upload all-uploads-done="allUploadsDone" key="key" name="name" subject-id="{{subject_id}}" grade-id="{{grade_id}}" type="{{type}}"></aurora-upload>
+	</form>
+</section>
+<div class="modal-footer cr-align">
+	<button type="button" class="btn btn-default col-xs-2 no-float" ng-click="close()" translate="common.close"></button>
+</div>
+

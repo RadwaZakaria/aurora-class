@@ -1,0 +1,36 @@
+<form ng-submit="addNewImge()" class="no-margin" name="newImageForm">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="close()">&times;</button>
+        <h4 class="modal-title" translate="common.images"></h4>
+        <!--<h4 class="modal-title" ng-model="columnName">Images</h4>-->
+    </div>
+    <!--<div class="modal-body">
+        <div class="form-group">
+            <label class="control-label" for="newCardTitle">Card title</label>
+            <div>
+                <input type="text" id="newCardTitle" placeholder="Title on a card" ng-model="title" required
+                       focus-me class="cardInputs form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="newCardDetails">
+                More details
+                <small>(optional)</small>
+            </label>
+            <div>
+                <textarea id="newCardDetails" ng-model="details" class="cardInputs form-control" rows="7"></textarea>
+            </div>
+        </div>
+    </div>-->
+
+    <section>
+
+        <div class="panel">
+            <aurora-upload key="key" name="name"></aurora-upload>
+        </div>
+
+    </section>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-aurora btn-danger" ng-click="addNewImge()" translate="common.ok"></button>
+    </div>
+</form>

@@ -1,0 +1,172 @@
+﻿<!--
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="auroraClass" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="auroraClass" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="auroraClass" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="auroraClass" class="no-js"> <!--<![endif]-->
+  <head>
+    <title data-ng-bind-html="pageTitle"></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; img-src 'self' * data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:*/ http://appenza-notifier.herokuapp.com/">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="assets/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="assets/stylesheets/resize.css">
+    <link href="assets/stylesheets/modal-fullscreen.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/humane-js/themes/libnotify.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-loading/angular-loading.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-bootstrap-colorpicker/css/colorpicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-sortable/dist/ng-sortable.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-sortable/dist/ng-sortable.style.min.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-switch/angular-ui-switch.min.css" />
+    <!-- app.css should be loaded after every other stylesheet -->
+    <link rel="stylesheet" href="assets/stylesheets/app.css">
+    <link rel="stylesheet" href="assets/stylesheets/bootstrap-overrides.css">
+    <link rel="stylesheet" href="assets/stylesheets/lessons.css">
+    <link rel="stylesheet" href="assets/stylesheets/quizzes.css">
+    <link rel="stylesheet" href="assets/stylesheets/question-bank.css">
+    <link rel="stylesheet" href="assets/stylesheets/ui-grid.css">
+    <!-- Temp.css should always be the last style sheet -->
+    <link rel="stylesheet" href="assets/stylesheets/temp.css">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+  </head>
+
+<body>
+
+    <main id="main">
+      <div  id="backdrop">&nbsp;</div>
+      <div ui-view dw-loading="loading" dw-loading-options="{text:'Loading...'}">
+        <div id="pacifier">
+          <div class="appenzaLogo"><img src="assets/images/appenzaLogo.png"></div>
+          <p>&nbsp;</p>
+          <span translate="common.loading"></span>
+        </div>
+      </div>
+    </main>
+
+
+  <script src="config.js"></script>
+
+  <script src="bower_components/tinymce-dist/tinymce.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- NEVER REMOVE BELOW COMMENT, it is used to include cordova using a HOOK -->
+  <!--$$cordova$$-->
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+
+  <script src="bower_components/angular-ui-utils/ui-utils.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+  <script src="bower_components/interact/interact.js"></script>
+
+  <script src="bower_components/Chart.js/Chart.min.js"></script>
+
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/spin.js/spin.js"></script>
+  <script src="bower_components/angular-loading/angular-loading.js"></script>
+
+  <script type="text/javascript" src="bower_components/angular-ui-select/dist/select.min.js"  charset="utf-8"></script>
+  <script type="text/javascript" src="bower_components/angular-fontawesome/dist/angular-fontawesome.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="bower_components/angular-cookie/angular-cookie.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="bower_components/ng-token-auth/dist/ng-token-auth.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="bower_components/momentjs/moment.js"></script>
+  <script type="text/javascript" src="bower_components/momentjs/min/locales.js"></script>
+  <script type="text/javascript" src="bower_components/humanize-duration/humanize-duration.js"></script>
+  <script type="text/javascript" src="bower_components/angular-timer/dist/angular-timer.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="bower_components/ng-sortable/dist/ng-sortable.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-translate/angular-translate.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script type="text/javascript" src='bower_components/angular-file-data-url/dist/fileDataUrl.js'></script>
+  <script type="text/javascript" src='bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.min.js'></script>
+  <script type="text/javascript" src='bower_components/videogular/videogular.js'></script>
+  <script type="text/javascript" src='bower_components/videogular-controls/vg-controls.js'></script>
+  <script type="text/javascript" src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap-confirm/dist/angular-bootstrap-confirm.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+
+
+  <script src="services/cordova.service.js"></script>
+
+  <!--<script src="lessons/responsive-sketchpad.js"></script>-->
+  <script src="services/image.browser.service.js"></script>
+    <script src="services/fileReader.service.js"></script>
+  <script src="services/interact.service.js"></script>
+  <script src="services/saNavigationGuard.service.js"></script>
+
+
+  <!-- need to replace the above dependency in order to depend on bower  <script src="common/fastclick.min.js"></script>-->
+
+  <script src="app.js"></script>
+
+  <script src="common/uniqueId.js"></script>
+  <script src="common/utilities.js"></script>
+  <script src="common/localization.js"></script>
+  <script src="common/components.module.js"></script>
+  <script src="common/directives/media/media.directive.js"></script>
+  <script src="common/directives/media/media.controller.js"></script>
+  <script src="common/directives/print.directive.js"></script>
+  <script src="common/file.directive.js"></script>
+  <script src="common/aurora-can.directive.js"></script>
+  <script src="common/directives/dynamic-content.directive.js"></script>
+  <script src="common/component-status-chart.directive.js"></script>
+  <script src="common/share.directive.js"></script>
+  <script src="common/directives/compare-to.directive.js"></script>
+  <script src="common/button.directive.js"></script>
+
+
+  <script src="questions/questions.module.js"></script>
+  <script src="questions/service/question-types.service.js"></script>
+  <script src="questions/directives/question.directive.js"></script>
+  <script src="questions/directives/question-preview.directive.js"></script>
+  <script src="questions/truefalse.js"></script>
+  <script src="questions/mcq.js"></script>
+  <script src="questions/msq.js"></script>
+  <script src="questions/blanks.js"></script>
+  <script src="questions/passage.js"></script>
+  <script src="questions/essay.js"></script>
+  <script src="questions/labelimage.js"></script>
+  <script src="questions/matching.js"></script>
+  <script src="questions/sorting.js"></script>
+  <script src="questions/question-bank.js"></script>
+  <script src="questions/attachment.js"></script>
+
+  <script src="quizzes/quizzes.module.js"></script>
+  <script src="quizzes/index.js"></script>
+  <script src="quizzes/results.js"></script>
+  <script src="quizzes/show-essay-question.js"></script>
+  <script src="quizzes/show-attachment-question.js"></script>
+  <script src="quizzes/take.js"></script>
+  <script src="quizzes/show-results.js"></script>
+  <script src="quizzes/question-result.js"></script>
+
+
+  <script src="common/library.controller.js"></script>
+  <script src="common/image.failure.directive.js"></script>
+  <script src="common/comments.directive.js"></script>
+  <script src="common/texteditor.directive.js"></script>
+  <script src="common/wizard.directive.js"></script>
+  <script src="common/upload.directive.js"></script>
+  <script src="common/upload-modal.js"></script>
+  <script src="common/directives/min-time-validation.directive.js"></script>
+
+  <script type="text/javascript" src="bower_components/humane-js/humane.min.js"></script>
+
+  <script type="text/javascript" src="bower_components/aws-sdk-js/dist/aws-sdk.js"></script>
+</body>
+</html>

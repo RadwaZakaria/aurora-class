@@ -1,0 +1,14 @@
+<div class="media-document-container">
+
+	<a download="{{name}}" class="" ng-click="download()" ng-show="onMobile"  target="newTab">
+		<i class="fa fa-file-text-o fa-5x"></i>
+		<p class="document-name">{{name.substring(name.indexOf('-') + 1) | limitTo: 15}}{{truncateString()}}</p>
+	</a>
+
+	<div id="status" ng-show="isDownloading"></div>
+
+	<a download="{{name}}" class="" href="{{url}}" ng-hide="onMobile" target="newTab">
+		<i class="fa fa-file-text-o fa-5x"></i>
+		<p class="document-name">{{name.substring(name.indexOf('-') + 1) | limitTo: 15}}{{truncateString()}}</p>
+	</a>
+</div>

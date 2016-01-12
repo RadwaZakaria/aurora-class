@@ -1,0 +1,64 @@
+
+<div data-ng-controller="QuestionResult"  class="container" dw-loading="loading" dw-loading-options="{text: 'Loading pages...'}">
+    <div id="draggableZone">
+    </div>
+    <div ng-show="questionImage || questionVideo || questionAduio">
+        <h3 translate="quiz.attachments" class="question-result-answer-title"></h3>
+        <div class="attachments-container essay-area" >
+            <ul class="attachment-thumbnails flex-c-stretch">
+                <li class="col-xs-4 cc-align" ng-show="questionImage!=undefined">
+                    <media-player uid="{{questionImage.uid}}" type="Image" url="{{questionImage.targetURL}}" class="videogular-container" ng-if="questionImage!=undefined"></media-player>
+                </li>
+                <li class="col-xs-4 cc-align" ng-show="questionVideo!=undefined">
+                    <media-player uid="{{questionVideo.uid}}" type="Video" url="{{questionVideo.targetURL}}" class="videogular-container" ng-if="questionVideo!=undefined"></media-player>
+                </li>
+                <li class="col-xs-4 cc-align felx-s-stretch" ng-show="questionAduio!=undefined"  ng-if="questionAduio.typeId!=9">
+                    <media-player uid="{{questionAduio.uid}}" type="Audio" url="{{questionAduio.targetURL}}" class="videogular-container" ng-if="questionAduio!=undefined"></media-player>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="stud-image-div disp-ib">
+            <img class="stud-image" ng-src="{{userImage.small}}">
+        </div>
+        <div class="disp-ib">
+            <h2 style="min-width: 150px;" class="question-result-answer-title">{{userName}}</h2>
+            <p class="question-result-answer-title" translate="quiz.answers"></p>
+        </div>
+
+        <div class="essay-area">
+            <ul ng-if="currentQuestion.typeId ==8"class="list col-xs-6 matching-correct-answer">
+                <li ng-repeat="item in userAnswer"class="item row">
+                    <span data-ng-bind="item.list1Item"></span>
+                </li>
+            </ul>
+            <ul ng-if="currentQuestion.typeId ==8" class="list col-xs-6 matching-correct-answer">
+                <li ng-repeat="item in userAnswer" class="item row">
+                    <span data-ng-bind="item.list2Item"></span>
+                </li>
+            </ul>
+            <ul ng-hide="currentQuestion.typeId == 10 || currentQuestion.typeId == 8 ">
+                <li ng-repeat="item in userAnswer track by $index">
+                    <span  ng-bind-html="item | unsafe"></span>
+                </li>
+            </ul>
+            <!--<p ng-if="currentQuestion.typeId==2" bind-html-unsafe="userAnswer[0]" ></p>-->
+            <div id="answer-container" class="attachments-container">
+            </div>
+        </div>
+    </div>
+    <section class="modal-footer">
+        <div class="form-group pull-left no-margin" ng-show="$root.user.is_student">
+            <h2 class="redspan disp-ib" translate="quiz.score"></h2>
+            <h2 class ="disp-ib"id="score">{{userScore |number}} / {{currentQuestion.points}} </h2>
+        </div>
+        <div class="form-group pull-left no-margin" ng-show="$root.user.is_teacher">
+            <label class="redspan" translate="assignment.evaluation"></label>
+            <input required min="0" max="{{currentQuestion.points}}"class="text-area-size form-control" ng-model="userScore" />
+            <label id="score"> / {{currentQuestion.points}} </label>
+        </div>
+        <button ui-sref="quizzes.results({id:quizId})" class="btn btn-aurora pull-right" translate="quiz.back"></button>
+        <button class="btn btn-aurora" ng-show="$root.user.is_teacher" ng-click="done()" translate="quiz.done"></button>
+    </section>
+</div>

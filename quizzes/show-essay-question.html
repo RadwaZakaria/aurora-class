@@ -1,0 +1,51 @@
+<div class="essay-question-modal" >
+    <header class="modal-header">
+        <h4 class="modal-title title essay-question-no">{{questionHeader}}</h4>
+        <fa name="times" class="close fa-lg" ng-click="close()"></fa>
+    </header>
+    <section class="modal-body">
+        <form name="essayForm">
+            <div name="myForm" novalidate ng-form>
+                <div class="essay-area">
+                    <p class="question-text" ng-bind-html="questionContent| unsafe" style="margin-top:10px"> </p>
+                    <hr>
+                    <div class="attachments-container">
+                        <ul class="attachment-thumbnails flex-c-stretch">
+                            <li class="col-xs-4 cc-align" ng-show="questionImage!=undefined">
+                                <media-player uid="{{questionImage.uid}}" type="Image" url="{{questionImage.targetURL}}" class="videogular-container" ng-if="questionImage!=undefined"></media-player>
+                            </li>
+                            <li class="col-xs-4 cc-align" ng-show="questionVideo!=undefined">
+                                <media-player uid="{{questionVideo.uid}}" type="Video" url="{{questionVideo.targetURL}}" class="videogular-container" ng-if="questionVideo!=undefined"></media-player>
+                            </li>
+                            <li class="col-xs-4 cc-align felx-s-stretch" ng-show="questionAduio!=undefined"  ng-if="questionAduio.typeId!=9">
+                                <media-player uid="{{questionAduio.uid}}" type="Audio" url="{{questionAduio.targetURL}}" class="videogular-container" ng-if="questionAduio!=undefined"></media-player>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="quiz.studentAnswer" style="margin-top: 15px;"></label>
+                    <div class="essay-area">
+                        <p ng-bind-html="userAnswer"></p>
+                    </div>
+                </div>
+                <!--<div>
+                    <p>Correct Answer</p>
+                    <div class="essay-area">
+                        <p>{{userAnswer}}</p>
+                    </div>
+                </div>-->
+            </div>
+        </form>
+    </section>
+    <section class="modal-footer">
+        <div class="form-group pull-left no-margin">
+            <label class="redspan" translate="quiz.evaluation"></label>
+            <input required min="0" max="{{questionScore}}" type="number" class="text-area-size form-control" ng-model="userScore" />
+            <label id="score"> / {{questionScore}} </label>    
+        </div>
+        <!--<button class="next-previous-ques"> <fa class="redspan" name="chevron-right"></fa></button>
+        <button class="next-previous-ques"> <fa class="redspan" name="chevron-left"></fa></button>-->
+        <button class="btn btn-aurora" ng-click="done()" translate="quiz.done"></button>
+    </section>
+</div>

@@ -1,0 +1,48 @@
+﻿<div class="quiz-modal" ng-controller="takeQuizController" dw-loading="loading" dw-loading-options="{text: 'Loading Questions...'}">
+    <header class="modal-header quiz-header">
+        <div class="timer-container">
+            <timer class="timer" ng-hide="isPreview" countdown="countDownTime" max-time-unit="'minute'"  finish-callback="timerFinished()" language="ar" interval="1000">
+                {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}
+            </timer>
+            <div class="timer" ng-if="isPreview" translate="quiz.minutesPreview" translate-values="{time: '{{quiz.time_limit}}'}">
+            </div>
+            <fa name="times" class="close fa-lg" ng-click="cancel()" aria-hidden="true" ng-show="isPreview"></fa>
+        </div>
+        <div class="title-container">
+            <h4 class="quiz-title no-margin" ng-model="columnName">{{quiz.name}}</h4>
+            <div class="quiz-controls">
+                <div class="quiz-btns">
+                    <button class="btn take-button quiz-pre fa fa-chevron-left" ng-click="handlePrevious()"></button>
+                    <button class="btn take-button quiz-next" ng-class="{ 'fa fa-chevron-right' : !isLastStep()}" ng-if="!isLastStep()" ng-click="handleNext()"></button>
+                    <button ng-show="$root.is_student" class="btn take-button quiz-next"
+                            mwl-confirm
+                            title="Submit Answers"
+                            message="Are you sure you want to submit ?"
+                            confirm-text="Submit"
+                            cancel-text="Cancel"
+                            placement="left"
+                            on-confirm="handleNext()"
+                            on-cancel=""
+                            confirm-button-type="success"
+                            cancel-button-type="default" ng-if="isLastStep()">Finish</button>
+                    <button ng-show="$root.user.is_teacher" class="btn take-button quiz-next arabic" ng-click="handleNext()" ng-if="isLastStep()">Finish</button>
+                </div>
+            </div>
+        </div>
+        <div class="quiz-question-select" >
+            <div class="btn-group">
+            <button class="quiz-question-btn " ng-repeat="question in questions track by $index" ng-class="{'quiz-cur-question':isCurrentStep($index), 'quiz-answered-question':question.status=='answered', 'quiz-skipped-question':question.status=='skipped'}" ng-click="setCurrentStep($index)">{{$index + 1}}</button>
+            </div>
+        </div>
+    </header>
+    <section class="modal-body quiz-body has-scroll">
+        <div ng-repeat="question in questions track by $index" class="question-view">
+            <div style="text-align: center; padding-top:12px;" ng-if="getCurrentStep() == $index" >
+                <question-preview question="question" template="{{question.viewModel.type.answerTemplate}}"style="padding:50px" />
+            </div>
+        </div>
+        <div>
+            <button ng-if="!isPreview" class="reset-button btn btn-aurora pull-right space" ng-click="clearAnswer()" translate="quiz.clearQuestion"></button>
+        </div>
+    </section>
+</div>

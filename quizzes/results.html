@@ -1,0 +1,76 @@
+<div data-ng-controller="quizResults" class="container">
+    <div class="quiz-result-chart">
+        <h2 translate="quiz.performanceSummary"></h2> <h2 translate="quiz.info" translate-values="{title: quizName, score: totalScore}"></h2>
+        <p class="DarkGreyColor" translate="quiz.performanceSummaryMessg"></p>
+        <div class="quiz-result-chart-img"><component-status-chart component="component" list legend="true"></component-status-chart></div>
+        <p class="DarkGreyColor quiz-result-title ">{{quizz.name}}</p>
+    </div>
+    <div>
+        <div class="disp-ib">
+            <h2 translate="quiz.performanceByQuestions"></h2>
+            <p class="DarkGreyColor disp-ib" translate="quiz.performanceByQuestionsMessg">
+            </p>
+        </div>
+        <div class="disp-ib quiz-result-print ">
+            <div class="quiz-print-result-img">
+                <fa class="quiz-result-fontawesome " name="print" ng-print print-element-id="results"  ></fa>
+            </div>
+            <p class="DarkGreyColor print-result-text" translate="quiz.printResult"></p>
+        </div>
+        <div id="results" class="results-table">
+          <table class="table table-bordered">
+            <tr class="print-header">
+                <th class="table-head" ng-repeat="cols in headercolumns">{{cols}}</th>
+            </tr>
+            <tr class="table-row"ng-repeat="scoresheet in scoresheets">
+                <td>{{scoresheet.user.name}}</td>
+                <td>{{scoresheet.result.statistics.score |number}}</td>
+                <td>{{scoresheet.result.statistics.correct_answers}}</td>
+                <td>{{scoresheet.result.statistics.incorrect_answers}}</td>
+                <td>{{scoresheet.result.statistics.partial_answers}}</td>
+                <td>{{scoresheet.result.statistics.pending_answers}}</td>
+                <td>{{scoresheet.result.statistics.skipped_answers}}</td>
+                <td class="no-print-cell" ng-repeat="answer in scoresheet.result.answers track by $index">
+                        <p ng-if="answer.status == 'pending'">
+                           <button ng-if="!$root.user.is_student" class='btn' type='button' ng-click='showQuestion(answer.question_id, answer, scoresheet ,$index)'>Pending</button>
+                            <label ng-if="$root.user.is_student" class='btn' >Pending</label>
+                        </p>
+                        <p ng-if="answer.status == 'partial'">
+                                <span ng-class="{'green' : answer.score >=1 , 'yellow': answer.score <= 1 &&  answer.score >= 0.5 ,'orange': answer.score >=0 && answer.score <=0.5, 'grey':answer.score == null }">
+                                </span>
+
+
+                            <a ui-sref="quizzes.showUserAnswer({quizId : quizId, scoresheetId: scoresheet.id, questionId :  answer.question_id})">{{answer.score |number}}/{{answer.points}}</a>
+                        </p>
+                        <p ng-if="answer.status == 'skipped'">
+                                <span ng-class="{'green' : answer.score >=1 , 'yellow': answer.score <= 1 &&  answer.score >= 0.5 ,'orange': answer.score >=0 && answer.score <=0.5, 'grey':answer.score == null }">
+                                </span>
+                            <a ui-sref="quizzes.showUserAnswer({quizId : quizId, scoresheetId: scoresheet.id, questionId :  answer.question_id})" class="skipped_ques"></a>
+                        </p>
+                        <p ng-if="answer.status == 'incorrect'">
+                                <span ng-class="{'green' : answer.score >=1 , 'yellow': answer.score <= 1 &&  answer.score >= 0.5 ,'orange': answer.score >=0 && answer.score <=0.5, 'grey':answer.score == null }">
+                                </span>
+                            <a ui-sref="quizzes.showUserAnswer({quizId : quizId,scoresheetId: scoresheet.id, questionId :  answer.question_id})">{{answer.score |number}}</a>
+
+                        </p>
+                        <p ng-if="answer.status == 'correct'">
+                                <span ng-class="{'green' : answer.score >=1 , 'yellow': answer.score <= 1 &&  answer.score >= 0.5 ,'orange': answer.score >=0 && answer.score <=0.5, 'grey':answer.score == null }">
+                                </span>
+                            <a ui-sref="quizzes.showUserAnswer({quizId : quizId,scoresheetId: scoresheet.id, questionId :  answer.question_id })">{{answer.score |number}}/{{answer.points}}</a>
+                        </p>
+                </td>
+            </tr>
+              <tr class="table-row dimmed no-print-cell" ng-show="$root.user.is_teacher" ng-repeat="users in withoutScoresheets">
+                  <td>
+                      <p>{{users.name}}</p>
+                      <button ng-click="newScoreSheet(users.id)">New ScoreSheet</button>
+                  </td>
+                  <td colspan="{{headercolumns.length -1}}"><label translate="quiz.skipped"></label></td>
+              </tr>
+        </table>
+        </div>
+
+</div>
+<button ui-sref="quizzes.index" class="btn btn-aurora pull-right" translate="quiz.back"></button>
+</div>
+<ui-view/>

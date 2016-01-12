@@ -1,0 +1,452 @@
+.grades-subjects-list.ng-invalid-required{
+    border : solid red 1px;
+    border-radius: 6px;
+}
+.close-spaces{
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.reset-button{
+    position:relative;
+    right:0;
+    margin-bottom:1px;
+}
+.user-settings-data{
+    color: #8A8282;
+}
+.modal-close-btn {
+    margin-top: 20px;
+    font-size: larger;
+}
+.sidebar ul{
+    padding:0 !important;
+}
+.question-content ul{
+    list-style: inherit !important;
+}
+.has-error{
+    background-color: #FDF0F0;
+    border-color: #FF9595;
+    border-radius: 6px;
+}
+.has-scroll ul{
+    padding-left: 20px;
+    list-style: inherit !important;
+}
+.lessonsSearch-items {
+     padding-top: 20px;
+     align-items: center;
+     border-bottom: 1px solid #eaeaea;
+ }
+.results-table {
+    display:block;
+    width: 100%;
+    overflow: auto;
+}
+.divCell media-player img{
+    height: 200px;
+}
+.question-viewModel-preview{
+    border: 1px solid #eaeaea;
+    font-size: 1.3em;
+    padding: 15px;
+}
+.editor-container section.mcq-answers .answer textarea, .editor-container section.msq-answers .answer textarea .answer-text-area {
+    border-radius: 0px;
+    margin: 0px;
+    resize: none;
+    margin-bottom: 20px;
+    min-height: 50px !important;
+    box-shadow: none;
+}
+.answer-text-area {
+    border-radius: 0px;
+    margin: 0px;
+    resize: none;
+    margin-bottom: 20px;
+    min-height: 50px !important;
+    box-shadow: none;
+}
+.question-result-answer-title{
+    color: #7f7f7f;
+}
+.stud-image{
+    border-radius: 50%;
+}
+.stud-image-div{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.ques-title-div{
+    margin-bottom:30px;
+    /*min-height: 200px;*/
+}
+
+.carousel-div{
+    height: 310px !important;
+}
+
+.carousel-go-button{
+    margin-top: -15px !important;
+}
+
+
+#loading_assets .dw-loading-overlay{
+    height: 20%;
+    width: 100%;
+}
+
+.groupsSearch {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    height: 30%;
+}
+.search-filter .uib-dropdown-menu {
+    padding-left: 0px;
+    list-style: none;
+}
+.related-resource-container{
+    vertical-align: middle;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    margin-top: 40px;
+}
+.comment-user-font{
+    font-size: 18px !important;
+}
+
+.dimmed {
+    background-color: #EEEEEE !important;
+}
+.related-resource-title-container{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #CECECE;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#passage_ques p span{
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #777;
+    border-radius: 10px;
+}
+.attachments-container .attachment-thumbnails {
+    top:33px;
+}
+videogular vg-controls .controls-container{
+    left:12px;
+}
+.essay-area .attachment-question .attach-question i.fa-question{
+    position: absolute;
+    left: 0.16em;
+    top: 0.36em;
+    font-size: 2.1em;
+}
+.essay-area .attachment-question {
+    position: relative;
+}
+.related-resource-container div div media-player .videogular-container{
+    height: 100%;
+    background-color: black;
+}
+.correction-space{
+    margin-top: 30px;
+}
+
+.comment-link {
+    width: 100%;
+}
+.matching-correct-answer{
+    text-align: center;
+    background-color: #EFEFEF;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 1px dashed #BBB;
+}
+.skipped_ques{
+    margin-top: 20px;
+    width: 30px;
+    background-color: #757575;
+    height: 3px;
+    text-align: center;
+}
+
+.lesson_edit-container{
+    border: 1px solid #F37461;
+    height: 100%;
+}
+
+.copyModal {
+            top: -15px;
+        }
+.resources-trach{
+    position: relative;
+    top: 6px;
+    color: #FFF;
+}
+
+.icons{
+    padding-right: 0;
+}
+
+.question-content p {
+    font-size: 22px;
+}
+#passage_content {
+    font-size: 22px;
+}
+.question-header-print {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal:not(.modal-fullscreen) .modal-dialog {
+    min-height: 650px;
+}
+
+.line-break{
+    border-bottom: 1px solid grey;
+}
+.line-break:last-child{
+    border-bottom: none;
+}
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+@media print {
+    body * {
+        display:none;
+    }
+    #printSection ,#printSection *{
+        display: block;
+    }
+    ul{
+        display: inline-block!important;
+    }
+
+    #printSection {
+        position:absolute;
+        left:0;
+        top:0;
+        width:700px;
+        page-break-inside: avoid;
+    }
+
+    section{
+        page-break-inside: avoid;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
+    #passage_content a{
+        display: inline-block;
+    }
+    .question-body .question-content p{
+        display: inline-block;
+    }
+    #SPAN0{
+        display: inline-block;
+    }
+
+     tr    {
+        display: table-row !important;
+         width: auto!important;
+
+    }
+     .table{
+         width: auto;!important;
+     }
+
+   .no-print-cell{
+       display: none!important;
+   }
+    tr:first-child th{
+        display:none !important;
+    }
+
+    tbody tr:first-child th:nth-child(-n+7) {
+        display: table-cell !important;
+    }
+}
+
+.rtl{
+    direction: rtl;
+}
+.rtl .navbar-header {
+    float: right !important;
+    margin-right: 50px;
+}
+.rtl .mobile-nav a.burger-menu{
+    position: absolute;
+    padding: 24px 22px 0 22px;
+    right:0;
+    top: 0;
+    height: 58px;
+    width: 60px;
+}
+.rtl .nav-tabs>li{
+    float:right;
+}
+.rtl .main-nav .home{
+     width: inherit;
+     margin-right: 0px;
+}
+.rtl .main-nav .quiz{
+    width: inherit;
+    margin-right: 0px;
+}
+.rtl #offcanvas {
+    right: -300px;
+    left:inherit;
+}
+.rightSidebar-visible #offcanvas{
+    right:0;
+    left:inherit !important;
+}
+.badge{
+    font-size: 18px !important;
+}
+.editor-container .attachment-question .attach-question .fa-question{
+    margin-left: -24px;
+}
+.attach{
+    margin-left: -37px;
+}
+.rtl #offcanvas header .username {
+    left:180px;
+}
+.rtl .navbar-nav>li{
+    float:right;
+}
+.rtl .user-setting{
+    margin-right: 267px;
+}
+.rtl .main-nav li{
+    border-left: 1px solid #f3edef;
+    border-right:none;
+}
+.rtl .quiz-list-header .add-quiz{
+    margin-right: 20px;
+}
+
+.rtl .editor-container section.sorting-question .form-group a {
+    left:0px;
+    right:inherit;
+}
+.rtl .editor-container section.sorting-question .form-group input {
+    padding-right: 1em;
+}
+.rtl .pull-right{
+    float:left !important;
+}
+.rtl .editor-container .pages li > div[class*="col-"]:first-of-type{
+    text-align: right;
+}
+.rtl .l-float{
+    float:right;
+}
+.rtl .editor-container .attachment-question .attach-question i.fa-question {
+    left: 0em;
+    right: 0.35em;
+}
+.rtl .pull-left {
+    float:right !important;
+}
+.rtl .editor-container section.matching-question .form-group a{
+    left:0px;
+}
+.rtl .quiz-modal .modal-header > div.title-container .quiz-controls {
+    right:inherit;
+    left: 0px;
+}
+.rtl .question-view-container{
+    text-align: right;
+}
+.rtl .right-space{
+    margin-right: 20px;
+}
+.rtl .wizard ol li {
+    float: right;
+    padding: 9px 35px 0px 35px;
+}
+.rtl .wizard ol li:before {
+    padding: 8px 15px 0 16px;
+}
+.rtl .quiz-options li:not(:first-of-type) {
+    border-right: 1px solid #DDD;
+    border-left:none
+}
+.rtl .btn > .fa {
+    margin: 0 -2px 2px 10px;
+}
+.rtl li.lesson-editor-page {
+    text-align: right !important;
+}
+.rtl li.lesson-editor-page > span {
+    right:inherit;
+    left:0px;
+}
+.rtl aurora-comments .comment-item .media-text {
+    margin: 8px 100px 0 74px;
+}
+.rtl .left-space{
+    margin-left: 0 !important;
+}
+.rtl .member-row{
+    padding: 0 5px 0 102px;
+}
+.rtl .post-area {
+    padding-left: 0px;
+    padding-right: 74px;
+}
+.rtl .post-nav .nav li:nth-child(2)>a {
+    border-left: none;
+    border-right: 1px solid #EBEBEB;
+}
+.rtl .group-cover-panel .panel-footer h3.group-name {
+    margin-right: 30px !important;
+}
+.rtl .posted-main img.user-avatar {
+    margin-right: 28px;
+}
+.rtl aurora-comments .comment-item img.user-avatar {
+    margin-right: 28px;
+}
+.rtl .arabic{
+    float: right !important;
+}
+.rtl .ltr{
+    direction:ltr ;
+}
+
+.progress .complete {
+
+}
+
+.complete {
+    font-size: 17px;
+    margin: 0% -13% 0% 0%;
+    color: #d9534f;
+}
+
+.progress-bar span {
+    position: absolute;
+    color: black;
+}
+

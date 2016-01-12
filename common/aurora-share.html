@@ -1,0 +1,39 @@
+<div class="aurora-search-list">
+  <div class="btn-group">
+    <label ng-repeat="endpoint in endpoints track by $index" class="btn" ng-model="activeEndpoint.id" btn-radio="$index"><fa name="{{endpoint.icon}}"></fa> <span class="right-space" translate="{{endpoint.title}}"></span></label>
+  </div>
+  <div class="form-group form-group-lg search">
+    <input ng-model="search[activeEndpoint.id]" ng-class="{extend: showSuggestions[activeEndpoint.id]}" ng-click="showSuggestions[activeEndpoint.id] = !showSuggestions[activeEndpoint.id]; currentPage = 1" ng-change="getItems()" type="text" class="form-control" name="search" id="search" ng-model-options="{debounce: 750}" placeholder="{{groups.findByName | translate}}" ui-keydown="{'13 27 38 40':'keypressCallback($event)'}">
+    <fa name="search"></fa>
+    <fa name="spinner fa-spin" ng-if="searching[activeEndpoint.id]"></fa>
+    <fa name="remove" ng-click="showSuggestions[activeEndpoint.id] = !showSuggestions[activeEndpoint.id]; currentPage = 1" ng-class="{hide: !showSuggestions[activeEndpoint.id]}"></fa>
+    <div class="suggestions" ng-class="{hide: !showSuggestions[activeEndpoint.id]}">
+      <a class="list-group-item" ng-click="save(item)" ng-repeat="item in items[activeEndpoint.id] track by $index" ng-bind-html="item.name" ng-class="{active: activeItem[activeEndpoint.id] == $index}"></a>
+      <a ng-if="showMoreButton[activeEndpoint.id]" ng-click="loadMore()" class="list-group-item load-more" translate="common.loadMore"></a>
+      <a ng-if="search[activeEndpoint.id].length >= threshold && !items[activeEndpoint.id].length" class="list-group-item" translate="common.noResults"></a>
+      <a ng-if="search[activeEndpoint.id].length < threshold && !items[activeEndpoint.id].length" class="list-group-item" translate="common.typeToSearch"></a>
+    </div>
+  </div>
+  <ul class="list-group selected">
+    <li class="list-group-item" ng-repeat="item in shares track by item.id">
+      <div ng-switch on="item.subject._type" class="disp-ib">
+      <img ng-switch-when="Group" ng-src="{{item.subject.image.small}}" az-err-src="assets/images//groupIcon.png">
+      <img ng-switch-when="User" ng-src="{{item.subject.avatar.small}}" az-err-src="assets/images/studentIcon.png"></div>
+      <div class="disp-ib">
+      <span ng-show="item.subject._type=='Group'" translate="lessons.groupname"></span><span ng-bind-html="item.subject.name" ng-show="item.subject._type=='Group'"></span> 
+      <span  ng-show="item.subject._type=='User'" translate="lessons.username"></span><span ng-bind-html="item.subject.name" ng-show="item.subject._type=='User'"></span>  
+      <br>
+      <span translate="lessons.grade"></span><span ng-bind-html="item.subject.grade.name"></span>
+      <br>
+      <span ng-show="item.subject._type=='Group'" translate="lessons.subject"></span><span ng-bind-html="item.subject.subject.name" ng-show ="item.subject._type=='Group'"></span>
+      <br>
+      <span ng-show="item.subject._type=='Group'" translate="lessons.members"></span> <span ng-bind-html="item.subject.memberships.length" ng-show ="item.subject._type=='Group'"></span>
+      </div>
+      <fa name="spinner fa-spin" ng-if="!item.id" class="pull-right"></fa>
+      <fa name="remove" ng-if="!!item.id" class="pull-right" ng-click="delete(item);"></fa>
+      <label ng-if="item.subject.is_teacher" class="control-label cu-pointer no-margin pull-right" style="padding:8px;">
+        <input type="checkbox" ng-if="!!item.id" ng-true-value="'manage'" ng-false-value="'access'" ng-change="manage(item)" ng-model="item.action">Is Owner
+      </label>
+    </li>
+  </ul>
+</div>

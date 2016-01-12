@@ -1,0 +1,27 @@
+
+<form name="essayForm">
+    <div name="myForm" novalidate ng-form>
+        <div class="quiz-result-modal-space">
+            <p class="modal-title title essay-question-no disp-ib">{{questionHeader}}</p>
+            <fa name="times" class="modal-close-btn title disp-ib close fa-lg" ng-click="close()"></fa>
+            <div id="question-container" class="essay-area">
+
+            </div>
+            <div>
+                <p translate="assignment.studentAnswer"></p>
+                <div id="answer-container" class="essay-area">
+                    
+                </div>
+            </div>
+            <hr>
+            <section class="modal-footer">
+                <div class="form-group pull-left no-margin">
+                    <label class="redspan" translate="assignment.evaluation"></label>
+                    <input required min="0" max="{{questionScore}}" type="number" class="text-area-size form-control" ng-model="userScore" />
+                    <label id="score"> / {{questionScore}} </label>
+                </div>
+                <button class="btn btn-aurora" ng-click="done()" translate="assignment.done"></button>
+            </section>
+        </div>
+    </div>
+</form>

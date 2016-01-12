@@ -1,0 +1,60 @@
+<div class="modal-header">
+	<h4 class="modal-title disp-ib" translate="quiz.quizResult"></h4>
+	<fa name="times" class="close fa-lg" ng-click="close()"></fa>
+</div>
+<div class="modal-body">
+	<div class="container-fluid">
+		<div class="col-sm-3">
+		</div>
+		<div class="col-sm-8">
+			<span class="quiz-results-text" translate="quiz.completed"></span>
+			<br>
+			<div class="showing-info">
+				<span class="quiz-results-info-small" translate="quiz.totalQuestions" translate-values="{questions: '{{data.answers.length}}'}">
+					  &nbsp; |&nbsp; Time Limit: 1:00:00 &nbsp;| &nbsp;Time Taken: 00:53:40
+				</span>
+				<br>
+				<span class="createdAt" translate="quiz.completedQuestions" translate-values="{answered: '{{data.answers.length - data.scoresheet.result.statistics.skipped_answers}} / {{data.quiz.questions.length}}'}">
+				</span>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="show-results-table">
+				<div class="show-results-divRow">
+					<div class="show-results-divCell">
+						<span style="" translate="quiz.toDoResults"></span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color:green;" translate="quiz.correctResults"><i class="fa fa-check" style="font-size: 45px; margin-right: 11px;"></i></span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color:green;" translate="quiz.partialCorrect"><i class="fa fa-check" style="font-size: 45px; margin-right: 11px;"></i></span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color: #984A4A;" translate="quiz.incorrectResults"><i class="fa fa-times" style="font-size: 45px; margin-right: 11px;"></i></span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="" translate="quiz.totalResults"></span>
+					</div>
+				</div>
+				<div class="show-results-divRow">
+					<div class="show-results-divCell">
+						<span >{{data.scoresheet.result.statistics.pending_answers}}</span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color:green;">{{data.scoresheet.result.statistics.correct_answers}}</span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color:green;">{{data.scoresheet.result.statistics.partial_answers}}</span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color: #984A4A;">{{data.scoresheet.result.statistics.incorrect_answers}}</span>
+					</div>
+					<div class="show-results-divCell">
+						<span style="color: red;">{{data.scoresheet.result.statistics.score | number}}&nbsp;/&nbsp;{{data.scoresheet.result.total_score}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

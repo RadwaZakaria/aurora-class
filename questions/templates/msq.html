@@ -1,0 +1,92 @@
+﻿<div ng-controller="msqController" dw-loading="saving" dw-loading-options="{text:'Saving...'}">
+
+        <form name="lessonForm" ng-submit="processForm( )" novalidate ng-disabled="question.fromQuestionBank || question.viewModel.preview">
+
+            <div  ng-hide ="question.fromQuestionBank || question.viewModel.preview">
+                <header>
+                    <h1 class="title" translate="quiz.msqTitle"></h1>
+                    <span class="greyspan" translate="quiz.negativeCorrection"></span>
+                </header>
+                <section class="clearfix fw correction-space">
+                     <div class="form-group form-group-lg row">
+                        <label class="control-label-lg col-sm-2 arabic" for="name" translate="quiz.questionstitle"></label>
+                        <div class="col-sm-7 arabic">
+                            <input type="text" name="name" class="form-control" ng-disabled="question.fromQuestionBank || question.viewModel.preview" ng-model="question.header" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset>
+                            <aurora-texteditor type="question.content" class="fw"></aurora-texteditor>
+                        </fieldset>
+                        <fieldset ng-disabled="question.fromQuestionBank || question.viewModel.preview" class="question-viewModel-preview" ng-if="question.fromQuestionBank || question.viewModel.preview">
+                            <div ng-bind-html="question.content | unsafe"/>
+                        </fieldset>
+                    </div>
+                </section>
+                <section class="msq-answers">
+                    <header>
+                        <h2 class="title" translate="quiz.answers"></h2>
+                    </header>
+                    <div class="form-group fw answer" data-ng-repeat="answer in answers"  >
+                        <label class="control-label col-xs-1 pull-right" >
+                            {{$index +1}}
+                        </label>
+                        <textarea  rows="6" class="form-control fw" ng-model="answer.value" ng-disabled="question.fromQuestionBank || question.viewModel.preview"></textarea>
+                        <label class="set-correct-answer cu-pointer">
+                            <input class="checkbox disp-ib cu-pointer" type="checkbox" ng-model="answer.isCorrect" ng-disabled="question.fromQuestionBank || question.viewModel.preview"/>
+                            <span ng-show="question.fromQuestionBank || question.viewModel.preview" >Correct Answer</span>
+                            <span ng-hide="question.fromQuestionBank || question.viewModel.preview" translate="quiz.setAsCorrectAnswer"></span>
+                         </label>
+                        <a data-ng-click="removeAnswer(this)" class="pull-right"> <label translate="quiz.removeAnswer" class="cu-pointer" ng-hide="question.fromQuestionBank || question.viewModel.preview"></label> </a>
+                    </div>
+                </section>
+                <section class="pull-right">
+                    <div class="fw">
+                        <button type="button" class="btn btn-aurora" translate="quiz.addnewanswer" data-ng-click="addAnswer()"  ></button>
+                    </div>
+                </section>
+            </div>
+
+            <div  ng-if ="question.fromQuestionBank || question.viewModel.preview">
+                <header>
+                    <h2 class="question-result-answer-title disp-ib" translate="quiz.msqTitle"></h2>
+                    <h2 class='question-result-answer-title disp-ib arabic' for="name" translate="quiz.question"></h2>
+                </header>
+                <section class="clearfix fw essay-area">
+                    <div class="form-group form-group-lg row">
+                        <div class="col-sm-7 arabic">
+                            <input type="text" name="name" class="form-control" ng-disabled="question.fromQuestionBank || question.viewModel.preview" ng-model="question.header" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <fieldset ng-disabled="question.fromQuestionBank || question.viewModel.preview" class="question-viewModel-preview" ng-if="question.fromQuestionBank || question.viewModel.preview">
+                            <div ng-bind-html="question.content | unsafe"/>
+                        </fieldset>
+                    </div>
+                    <ul class="form-group" style="margin-top:30px;">
+                        <li ng-repeat="(key, answer) in question.options track by $index" ng-model="question.userAnswer[$index]" style="margin-bottom: 10px;">
+                            <label class="control-label cu-pointer no-margin" style="padding:8px;">
+                                <input type="checkbox" disabled ng-model="question.userAnswer[key]"  ng-true-value="'{{answer}}'" ng-false-value="''" name="{{question.id}}"> {{answer.value}}
+                            </label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="msq-answers"  ng-show="($root.user.is_teacher) || (question.viewModel.showResult && $root.user.is_student)">
+                    <header>
+                        <h1 class="title" translate="quiz.correctAnswer"></h1>
+                    </header>
+                    <div class="essay-area">
+                        <div data-ng-repeat="answer in answers">
+                            <label class="set-correct-answer cu-pointer">
+                                <input class="checkbox disp-ib cu-pointer" type="checkbox" ng-model="answer.isCorrect" ng-disabled="question.fromQuestionBank || question.viewModel.preview"/>
+                                <!--<span translate="quiz.correctAnswer"></span>-->
+                            </label>
+                            <label ng-disabled="question.fromQuestionBank || question.viewModel.preview">{{answer.value}}</label>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </form>
+</div>

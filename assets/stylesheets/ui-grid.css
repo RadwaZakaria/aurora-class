@@ -1,0 +1,120 @@
+
+.results-grid .ui-grid-icon-angle-down{
+	display : none;
+}
+
+.results-grid .ui-grid-header-cell{
+	background-color: #F37A67;
+	color: #FFF;
+	text-align: center;
+}
+.table-head{
+	background-color: #F37A67;
+	color: #FFF;
+	text-align: center;
+	margin:0 auto;
+	width:auto;
+	vertical-align: middle;
+}
+
+.results-grid .ui-grid-header-cell:first-child{
+	text-align: center;
+}
+
+.table-row:nth-child(even){
+	background-color: white ;
+	text-align: center;
+	border-bottom: 1px solid #D4D4D4;
+	vertical-align: middle;
+}
+
+.table-row:nth-child(odd){
+	background-color: white ;
+	text-align: center;
+	border-bottom: 1px solid #D4D4D4;
+	vertical-align: middle;
+}
+
+.results-grid{
+  width:775px;
+  height:320px;
+  margin: 0 auto;
+}
+.results-grid .ui-grid-row:nth-child(even).ui-grid-cell{
+	background-color: white ;
+	text-align: center;
+	border-bottom: 1px solid #D4D4D4;
+	vertical-align: middle;
+}
+.results-grid .ui-grid-row:nth-child(odd) .ui-grid-cell{
+	background-color: white ;
+	text-align: center;
+	border-bottom: 1px solid #D4D4D4;
+	vertical-align: middle;
+}
+.results-grid .ui-grid-row > div {
+	overflow: hidden;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.yellow{
+	background-color: #EABA3C;
+	float:right;
+	width:10px;
+	height:6px;
+}
+
+.light-yellow{
+	background-color: #EABA3C;
+	float:right;
+	width:10px;
+	height:6px;
+	margin-left: 11px;
+}
+.green {
+    background-color: #6AB45F;
+	float:right;
+	width:10px;
+	height:6px;
+}
+.light-green{
+	background-color: #6AB45F;
+	float:right;
+	width:10px;
+	height:6px;
+}
+.orange {
+	background-color: #CD460E;
+	float:right;
+	width:10px;
+	height:6px;
+}
+.light-orange{
+ 	background-color: #CD460E;
+	float:right;
+	width:10px;
+	height:6px;
+}
+.grey{
+	background-color: #757575;
+	float:right;
+	width:10px;
+	height:6px;
+}
+.light-grey{
+	background-color: #757575;
+	float:right;
+	width:10px;
+	height:6px;
+}
+.results-grid .ui-grid-viewport::-webkit-scrollbar {
+  width: 18px ;
+  height: 18px;
+}
+.results-grid .ui-grid-viewport::-webkit-scrollbar-thumb {
+  background-color: #F47967 ;
+  border-radius: 10px ;
+  width:18px;
+  height:18px;
+
+}

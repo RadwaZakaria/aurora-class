@@ -1,0 +1,21 @@
+<div class="upload-modal cc-align" dw-loading="saving" dw-loading-options="{text: 'saving...'}">
+  <div class="modal-body" stop-event="touchend">
+    <div class="file-selector">
+      <fa class="sc-align" name="file" style="font-size:8em;" ng-disabled="flag"></fa>
+      <input class="sc-align" ng-disabled="flag" type="file" name="files[]" file multiple></input>
+      <p class="disp-ib" ng-hide="files"  translate="common.chooseFile"></p>
+	  <p class="disp-ib" ng-show="files && !flag">{{files.length}} File Choosen...</p>
+	  <p class="disp-ib" ng-show="flag && files">Uploading {{files.length}} File...</p>
+    </div>
+    <!-- Progress Bar -->
+    <div class="progress" style="overflow: visible;" ng-repeat="p in uploadProgress track by $index">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="{{ p }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ p }}%; background-color: #d9534f;">
+		<span>{{files[$index].name | limitTo: 15}}{{truncateString($index)}}</span>
+	  </div>
+	  <fa class="pull-right complete" name="check" ng-show="finishedFile[uniques[$index]] === 1"></fa>
+	  <fa class="pull-right complete" name="spinner fa-spin" ng-show="finishedFile[uniques[$index]] === 0"></fa>
+	  <fa class="pull-right complete" name="times" ng-show="finishedFile[uniques[$index]] === -1"></fa>
+    </div>
+    <a class="btn btn-aurora btn-danger btn-block btn-lg" ng-disabled="flag"  ng-click="upload()" translate="common.buttonUpload" ng-hide="!files"></a>
+  </div>
+</div>

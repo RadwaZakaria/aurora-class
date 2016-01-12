@@ -1,0 +1,81 @@
+<div data-ng-controller="quizzesIndex">
+    <div class="headerTitle visible-lg-block">
+        <div class="container" translate="quiz.quizzes"></div>
+    </div>
+    <div class="container">
+        <form data-ng-submit="getQuizzes()">
+            <div class="lessonsSearch row ">
+                <div class="col-md-3 col-xs-6 search-filter" ng-class="{'pull-right' : $root.direction=='rtl'}">
+                    <ui-select data-ng-model="groups.selected" ng-disabled="disabled">
+                        <ui-select-match placeholder="{{'lessons.byGroup' | translate}}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="group.id as group in groups | filter: { name: $select.search }"  ng-class="{'select-right-text' : $root.direction=='rtl'}" >
+                            <div data-ng-bind-html="group.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-3 col-xs-6 search-filter" ng-class="{'pull-right' : $root.direction=='rtl'}">
+                    <ui-select data-ng-model="grades.selected" ng-disabled="disabled">
+                        <ui-select-match placeholder="{{'quiz.byGrade' | translate}}" ng-style="$root.direction == 'rtl' && {'text-align':'right'}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="grade.id as grade in grades | filter: { name: $select.search }"  ng-class="{'select-right-text' : $root.direction=='rtl'}">
+                            <div data-ng-bind-html="grade.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-3 col-xs-6 search-filter" ng-class="{'pull-right' : $root.direction=='rtl'}">
+                    <ui-select data-ng-model="dates.selected" ng-disabled="disabled">
+                        <ui-select-match placeholder="{{'quiz.byDate' | translate}}">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="date.id as date in dates | filter: { name: $select.search }"  ng-class="{'select-right-text' : $root.direction=='rtl'}">
+                            <div data-ng-bind-html="date.name |  highlight: $select.search |translate"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-3 col-xs-6 search-filter">
+                    <button type="submit" class="btn btn-aurora searchBtn" translate="quiz.search"></button>
+                </div>
+        </form>
+    </div>
+
+
+    <div class="creatLesson row">
+
+        <div translate="quiz.newquizhdr"></div>
+        <div class="add-lesson"><a ui-sref="quizzes.new" translate="quiz.newquiz"><span></span></a></div>
+
+    </div>
+
+    <div class="row allLessonsContainer" data-ng-cloak dw-loading="loading" dw-loading-options="{text: 'Loading...'}">
+        <div class="row" ng-show="!quizzes.length" translate="quiz.no_quizzes"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 lessonData" ng-repeat="quiz in quizzes track by $index" >
+            <div class="lessonImage">
+                <a ui-sref="quizzes.show({id: quiz.id})"><img ng-src="{{quiz.image.medium}}" az-err-src="assets/images/lessons/noImage.png"/></a>
+            </div>
+            <div class="dateArea" ng-init="creationDate = (quiz.created_at | date:'dd/MM/yyyy')">
+                <div  class="statusDate privateDate" translate="quiz.creationDate" translate-values="{date : creationDate}"></div>
+                <div class="privateLabel" data-ng-if="quiz.is_private"></div>
+            </div>
+            <div class="lesson-stats">
+                <div class="lessonsDetails lessons-details-container">
+                    <div class="title">{{quiz.name}} </div>
+                    <p>{{quiz.description | limitTo: 70}} </p>
+                </div>
+                <div class="shareArea">
+                    <div class="title" translate="quiz.sharing"></div>
+                    <div class="shareDetail">
+                        <div class="student col-md-6 col-sm-6 col-xs-6" translate="quiz.student"></div>
+                        <div class="group col-md-6 col-sm-6 col-xs-6" translate="quiz.groups"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="cc-align" style="margin-top:50px;padding-top:15px;border-top: 1px solid #eee" ng-show="enableMoreButton">
+        <a class="btn btn-primary btn-aurora" data-ng-click="OnLoadMoreButtonClick()" dw-loading="loading-more" dw-loading-options="{text:'Loading...'}">
+            <fa name="arrow-down"></fa>
+            <span translate="common.loadMore"></span>
+        </a>
+    </section>
+</div>
+</div>

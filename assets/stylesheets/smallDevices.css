@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 19, 2015, 2:24:10 AM
+    Author     : Engy
+*/
+
+
+
+@media screen and (max-width: 770px){
+    .popupNav ul li a div.imgLink{display: none;}
+    .lessonsPopup {padding: 0;}
+    .mainLessonPopup{margin-top: 20px;}
+    header.lessonsPopup .container-fluid{}
+    header.lessonsPopup .navbar-inverse .navbar-nav>li>a,header.lessonsPopup .navbar-inverse .navbar-nav>.active>a{background: #56656d;color:#fff}
+    #createLessonsPopupNav .navbar-nav{margin: 0;padding: 0}
+    header.lessonsPopup .container-fluid, #createLessonsPopupNav{margin: 0}
+    header.lessonsPopup .navbar-inverse .navbar-nav>li>a:hover{background: #333;}
+    .popupNav{height:auto;}
+     header.lessonsPopup .container-fluid>.navbar-header{margin: 0;}
+   
+}

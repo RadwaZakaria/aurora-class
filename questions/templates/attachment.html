@@ -1,0 +1,57 @@
+<div ng-controller="attachmentController" dw-loading="saving" dw-loading-options="{text:'Saving...'}">
+
+    <div  ng-hide="question.fromQuestionBank ||question.viewModel.preview">
+        <header>
+            <h1 class="title" translate="quiz.attachment.title"></h1>
+            <span class="greyspan" translate="quiz.highlightCorrection"></span>
+        </header>
+        <section class="clearfix fw correction-space">
+             <div class="form-group form-group-lg row">
+                <label class="control-label-lg col-sm-2 arabic" for="name" translate="quiz.questionstitle"></label>
+                <div class="col-sm-7 arabic">
+                    <input type="text" name="name" class="form-control" ng-disabled="question.fromQuestionBank ||question.viewModel.preview" ng-model="question.header" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <aurora-texteditor type="question.content" class="fw"></aurora-texteditor>
+                </fieldset>
+                <fieldset ng-disabled="question.fromQuestionBank || question.viewModel.preview" class="question-viewModel-preview" ng-if="question.fromQuestionBank">
+                    <div ng-bind-html="question.content | unsafe"/>
+                </fieldset>
+            </div>
+        </section>
+        <section  class="attachment-question">
+            <a class="attach-question" role="button" data-ng-click="attachFile()">
+                <fa name="file-o fa-3x"></fa><fa name="question fa-3x"></fa>
+                <span ng-show="!question.fileName">Attach Question file</span>
+                <span ng-show="question.fileName">{{question.fileName}}</span>
+            </a>
+        </section>
+    </div>
+    <div  ng-if="question.fromQuestionBank ||question.viewModel.preview">
+        <header>
+            <h2 class="question-result-answer-title disp-ib" translate="quiz.attachment.title"></h2>
+            <h2 class='question-result-answer-title disp-ib arabic' for="name" translate="quiz.question"></h2>
+        </header>
+        <section class="clearfix fw essay-area">
+            <div class="form-group form-group-lg row">
+                <div class="col-sm-7 arabic">
+                    <input type="text" name="name" class="form-control" ng-disabled="question.fromQuestionBank ||question.viewModel.preview" ng-model="question.header" required />
+                </div>
+            </div>
+
+            <div class="form-group question-viewModel-preview">
+                    <p ng-bind-html="question.content | unsafe"/>
+            </div>
+            <div ng-show="question.fileName" class="attachment-question">
+                <a class="attach-question" role="button">
+                    <fa name="file-o fa-3x"></fa>
+                    <fa name="question fa-3x attach"></fa>
+                    <span>{{question.fileName}}</span>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>

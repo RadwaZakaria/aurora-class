@@ -1,0 +1,34 @@
+﻿<div class="question-view-container" ng-if="question.viewModel.print != true">
+    <fieldset class="from-question-bank" ng-show="question.fromQuestionBank && question.viewModel.user.id !=  $rootScope.user.id">
+        <div class="pull-right">
+            <img ng-src="{{question.viewModel.user.avatar.small}}">
+            <label class="control-label">{{question.viewModel.user.name}}</label>
+        </div>
+    </fieldset>
+    <section class="question-body">
+        <div ng-bind-html="question.header | unsafe" class="question-header"></div>
+        <div ng-bind-html="question.content | unsafe" class="question-content"></div>
+        <ul class="form-group" style="margin-top:30px;">
+            <li ng-repeat="(key, answer) in question.options track by $index" ng-model="question.userAnswer[$index]" style="margin-bottom: 10px;">
+                <label class="control-label cu-pointer no-margin" style="padding:8px;">
+                    <input type="checkbox" ng-model="question.userAnswer[key]"  ng-true-value="'{{answer}}'" ng-false-value="''" name="{{question.id}}"> {{answer.value}}
+                </label>
+            </li>
+        </ul>
+    </section>
+    <section class="attachments-container">
+        <ul class="attachment-thumbnails flex-c-stretch" ng-show="question.video!=undefined || question.audio!=undefined || question.image!=undefined">
+            <li class="col-xs-4 cc-align" ng-show="question.image!=undefined">
+                <media-player uid="{{question.image.uid}}" type="Image" url="{{question.image.targetURL}}" class="videogular-container" ng-if="question.image!=undefined"></media-player>
+            </li>
+            <li class="col-xs-4 cc-align" ng-show="question.video!=undefined">
+                <media-player uid="{{question.video.uid}}" type="Video" url="{{question.video.targetURL}}" class="videogular-container" ng-if="question.video!=undefined"></media-player>
+            </li>
+            <li class="col-xs-4 cc-align felx-s-stretch" ng-show="question.audio!=undefined"  ng-if="question.typeId!=9">
+                <media-player uid="{{question.audio.uid}}" type="Audio" url="{{question.audio.targetURL}}" class="videogular-container" ng-if="question.audio!=undefined"></media-player>
+            </li>
+        </ul>
+    </section>
+</div>
+
+

@@ -1,0 +1,82 @@
+/* list css stylesheet */
+
+body{
+    text-align:center;
+}
+.main{
+    margin      : 0px 200px 0px 200px !important;
+    text-align  : center;
+}
+
+
+
+.lesson img{
+    height      : 200px;
+    width       : 200px;
+
+}
+
+.lessonInner{
+    margin      : 0 auto;
+    width       : 200px;
+}
+
+.toplinks{
+    padding     : 20px 0px 0 0;
+}
+
+.toplinks a{
+    margin      : 0px 50px 0px 60px;
+
+}
+
+
+
+
+.dropdownDiv{
+    margin      : 10px 0 10px 0 ;
+}
+
+.dropdownDiv .btn {
+    padding-right: 30px;
+    padding-left : 30px;
+    margin       : 0 0 0 70px;
+}
+
+.dropdownDiv .btn-group {
+    margin       : 0 0 0 55px;
+}
+
+
+.left{
+    float       : left;
+}
+
+.right{
+    float       : right;
+}
+
+.clearRight{
+    clear       : right;
+}
+
+#searchbutton{
+
+    width : 10%;
+
+}
+
+#searchicon{
+    background-color: white;
+    padding : 3px 2px 5px 0;
+    border :none;
+}
+
+.searchdiv{
+    height:10px;
+}
+
+.toplinks input{
+    width : 10%;
+    border : none;
+}

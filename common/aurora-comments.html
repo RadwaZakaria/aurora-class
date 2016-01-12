@@ -1,0 +1,42 @@
+<div>
+  <ul>
+    <li class="comment-item" ng-repeat="(index, comment) in list.comments" id="comment-{{comment.id}}">
+      <div class="panel panel-default">
+        <form role="form" class="no-margin">
+          <div class="row-sm-offset-1 row-sm-10">
+            <div class="media-body">
+              <div class="pos-ab dropdown" uib-dropdown ng-hide="isTheOwner(comment)">
+                <a class="dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown" >
+                  <fa name="pencil" class="fingerPointer" tooltip-placement="left"></fa>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a ng-click="deleteComment(comment)" translate="comments.delete"></a></li>
+                  <li><a ng-click="toggle(index)" translate="comments.edit"></a></li>
+                </ul>
+              </div>
+              <img class="user-avatar media-object" ng-src="{{userNames[index].avatar.small}}" az-err-src="assets/images/profileImg.png"/>
+              <span class="media-text">
+                <span  class="comment-user-font media-heading disp-ib user-name">{{userNames[index].name}}</span>
+                <p class="" ng-hide="toggleArea[index]">
+                   {{comment.body}}
+                 </p>
+                <p class="created-at createdAt">{{comment.created_at | date:'MMMM dd yyyy hh:mm a'}} </p>
+              </span>
+              <div class="form-group" ng-show="toggleArea[index]">
+                <a class="comment-link" ng-keydown="$event.which === 13 && ! $event.shiftKey && updateComment(comment, index)" ng-show="toggleArea[index]">
+                  <textarea class="form-control edit-comment-textarea no-resize" ng-show="toggleArea[index]" ng-model="updateBody[index]"></textarea>
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </li>
+  </ul>
+  <form role="form" enter-submit="saveComment()" ng-show="canComment">
+    <div ng-init="init()">
+      <textarea class="form-control form-control-lg no-resize comment-textarea" placeholder="{{'comments.writeComment' | translate}}" id="text" rows="2" ng-model="body"></textarea>
+      <button ng-click="saveComment()" class="btn btn-aurora btn-danger comment-btn pull-right"  translate="comments.save"></button>
+    </div>
+  </form>
+</div>

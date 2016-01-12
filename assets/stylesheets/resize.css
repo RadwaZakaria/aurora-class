@@ -1,0 +1,208 @@
+.edit-bubble {
+
+  position: absolute !important;
+  color: #666 !important;
+  display:none ;
+  width:200px !important;
+  height:50px !important;
+  padding: 10px 10px !important;
+  border:1px solid !important;
+  background-color: #E0916A;
+  border-color: #bbb #bbb #a8a8a8 !important;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.2) !important;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2) !important;
+  -ms-box-shadow: 0 1px 3px rgba(0,0,0,.2) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2) !important;
+  z-index:400;
+}
+.edit-bubble-link, .edit-bubble a {
+  color: #15c!important;
+  cursor: pointer ;
+  text-decoration: none!important;
+  z-index:300;
+}
+
+.edit-span-container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.edit-options-link
+{
+
+  color:white!important;
+  cursor: pointer ;
+  text-decoration: none!important;
+   z-index:300;
+   padding-left: 4px;
+   padding-right: 4px;
+   text-align: center;
+}
+
+.edit-options-link-border
+{
+  color:white!important;
+  cursor: pointer ;
+  border-right:1px solid !important;
+  border-color: white;
+  text-decoration: none!important;
+   z-index:300;
+
+
+}
+
+.editable-div {
+  position: absolute !important;
+  border: 1px dotted #999;
+  cursor: pointer !important;
+  background-color: white !important;
+  z-index:300;
+  display: inline;
+  word-wrap: break-word;
+  /*padding-bottom:2px;*/
+  /*width: 350px !important;*/
+
+}
+
+.editable-div.will-drop {
+  background-color: #29e !important;
+}
+
+.editable-div.drop-active {
+  background-color: #4e4 !important;
+}
+
+.con-div {
+  position: absolute !important;
+  border: solid 3px #444 !important;
+  cursor: pointer !important;
+  width:200px;
+  height:200px;
+  z-index: -5 !important;
+}
+
+.resize-rect {
+  position: absolute !important;
+  border: dashed 2px #bbb !important;
+  float:left;
+  box-sizing: border-box !important;
+  pointer-events: none !important;
+  /*width: 350px !important;*/
+  z-index: 400 !important;
+}
+
+.resize-handle-Up-Middle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #29e;
+  border-radius: 50%;
+  margin: -8px;
+  box-sizing: border-box;
+  pointer-events: auto;
+  background-color:red  !important;
+  left: 50%;
+  cursor: n-resize;
+}
+
+.resize-handle-down-Middle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #29e;
+  border-radius: 50%;
+  margin: -8px;
+  box-sizing: border-box;
+  pointer-events: auto;
+  left: 50%;
+  bottom: 0;
+  cursor: s-resize;
+}
+
+.resize-handle-Left-Middle {
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px!important;
+  border: solid 2px #29e !important;
+  border-radius: 50% !important;
+  margin: -8px !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+  top: 50% !important;
+  cursor: w-resize !important;
+}
+
+.resize-handle-Right-Middle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #29e;
+  border-radius: 50%;
+  margin: -8px;
+  box-sizing: border-box;
+  pointer-events: auto;
+  top: 50%;
+  right: 0;
+  cursor: e-resize;
+}
+
+
+.resize-handle-Up-Left {
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  border: solid 2px #29e !important;
+  border-radius: 50% !important;
+  margin: -8px !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+  left: 0 !important;
+  top:0  !important;
+  cursor: nw-resize !important;
+}
+
+.resize-handle-up-Right {
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  border: solid 2px #29e !important;
+  border-radius: 50% !important;
+  margin: -8px !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+  right: 0 !important;
+  cursor: ne-resize !important;
+}
+
+.resize-handle-down-Left {
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  border: solid 2px #29e !important;
+  border-radius: 50% !important;
+  margin: -8px !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  cursor: sw-resize !important;
+}
+
+.resize-handle-down-Right {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #29e;
+  border-radius: 50%;
+  margin: -8px;
+  box-sizing: border-box;
+  pointer-events: auto;
+
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}

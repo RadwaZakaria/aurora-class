@@ -1,0 +1,144 @@
+/* Stretch container on all screens */
+.container {
+  width: 98%;
+  margin: 0 1%;
+}
+
+/* Tabbed Navigation Styles */
+.nav-tabs {
+  border-bottom: 2px solid #f37461;
+}
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  color: #ced2d3;
+  background-color: #f7f7f7;
+  border: none;
+  border-bottom: 1px solid #f37461;
+  border-radius: 0;
+  font-size: 0.9em;
+  padding: 8px 15px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #fff;
+  cursor: default;
+  background-color: #f37461;
+  border: none;
+  /*border-bottom-color: transparent;*/
+}
+
+.nav-tabs>li>a:hover {
+  border-color: #eee #eee #f37461;
+  background-color: #eee;
+}
+
+label.control-label-lg{
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+/* Redefining Medium */
+@media (min-width: 800px) and (max-width: 1280px) {
+  .visible-md, .visible-md-block{
+    display: block !important;
+  }
+  .visible-md-inline{
+    display: inline !important;
+  }
+  .visible-md-block {
+    display: block !important;
+  }
+  .visible-md-inline {
+    display: inline !important;
+  }
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+/* Redefining Large */
+@media (min-width: 1281px) {
+  .visible-lg, .visible-lg-block {
+    display: block !important;
+  }
+
+  .visible-lg-inline {
+    display: inline !important;
+  }
+
+  .hidden-lg {
+    display: none !important;
+  }
+
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+/* carousel  */
+.carousel-control {
+    width: 4%;
+    background: none !important;
+    margin-left:0px !important;
+    text-shadow: 0 2px 4px #000;
+}
+
+.carousel-control:hover{
+    transition: background 100ms ease-in-out;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Modal*/
+.modal-dialog{
+  cursor: default;
+}
+.modal:not(.modal-fullscreen) .modal-dialog{
+  display: flex;
+  align-items: center;
+  height: calc(100% - 60px);
+}
+.modal-header .close{
+  padding: 5px;
+}
+.modal .modal-body.has-scroll {
+  overflow-y: auto;
+}
+
+.modal-content{
+  width: 100%;
+}
+/*
+.modal-content > div{
+  height: 100%;
+}*/
+
+@media (min-width: 1090px){
+  .modal:not(.modal-fullscreen) .modal-dialog{
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 1090px){
+  .modal:not(.modal-fullscreen) .modal-dialog{
+    margin: 30px 15px;
+    width: calc(100% - 30px);
+    max-height: calc(100% - 60px);
+  }
+}
+
+/*Carrousel*/
+
+@media screen and (min-width: 768px){}
+  .carousel-indicators {
+      bottom: 5px;
+  }
+}
+
+/* Table Cells*/
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  vertical-align: middle !important;
+}

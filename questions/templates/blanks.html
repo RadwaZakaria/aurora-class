@@ -1,0 +1,71 @@
+﻿<div ng-controller="blanksController" dw-loading="saving" dw-loading-options="{text:'Saving...'}">
+    <form name="lessonForm" ng-submit="processForm( )" novalidate>
+
+        <div ng-hide="question.fromQuestionBank || question.viewModel.preview">
+            <header>
+                <h1 class="title" translate="quiz.blankstitle"></h1>
+                <span class="greyspan" translate="quiz.sortCorrection"></span>
+            </header>
+            <section class="clearfix fw correction-space">
+                <div class="form-group form-group-lg row" >
+                    <label class="control-label-lg col-sm-2 arabic" for="name" translate="quiz.questionstitle"></label>
+                    <div class="col-sm-7 arabic">
+                        <input type="text" name="name" class="form-control" ng-model="question.header" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <div>
+                            <textarea ui-tinymce="tinymceOptions" cols="50" ng-model="questionData" > </textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="question-viewModel-preview" ng-if="question.fromQuestionBank || question.viewModel.preview">
+                        <div ng-bind-html="question.content | unsafe"/>
+                    </fieldset>
+                </div>
+            </section>
+            <section class="blanks-answers">
+                <header>
+                    <h2 class="title" translate="quiz.answers"></h2>
+                </header>
+                <div class="badge badge-success pull-left" ng-repeat="answer in answers">{{answer.value}}
+                </div>
+                <div class="col-md-4 col-xs-8">
+                    <div class="form-group form-group-lg" id="containerView">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div ng-if="question.fromQuestionBank || question.viewModel.preview">
+            <header>
+                <h2 class="question-result-answer-title disp-ib" translate="quiz.blankstitle"></h2>
+                <h2 class='question-result-answer-title disp-ib arabic' for="name" translate="quiz.question"></h2>
+            </header>
+            <section class="clearfix fw essay-area">
+                <div class="form-group form-group-lg row">
+                    <div class="col-sm-7 arabic">
+                        <input type="text" name="name" class="form-control" ng-disabled="question.fromQuestionBank ||question.viewModel.preview" ng-model="question.header" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <fieldset ng-disabled="question.fromQuestionBank ||question.viewModel.preview " class="question-viewModel-preview" ng-if="question.fromQuestionBank || question.viewModel.preview">
+                        <div ng-bind-html="question.content | unsafe"/>
+                    </fieldset>
+                </div>
+            </section>
+            <section  ng-show="($root.user.is_teacher) || (question.viewModel.showResult && $root.user.is_student)" class="blanks-answers essay-area">
+                <header>
+                    <h1 class="title" translate="assignment.correctAnswer"></h1>
+                </header>
+                <div  ng-repeat="answer in answers">{{answer.value}}
+                </div>
+                <div class="col-md-4 col-xs-8">
+                    <div class="form-group form-group-lg" id="containerViews">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </form>
+</div>
